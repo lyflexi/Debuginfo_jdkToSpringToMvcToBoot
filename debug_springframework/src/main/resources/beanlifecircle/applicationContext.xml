@@ -10,12 +10,8 @@
 
     <bean id="userBean" class="org.lyflexi.debug_springframework.beanlifecircle.UserBean" init-method="myInit" destroy-method="myDestroy">
         <!-- 构造函数注入 -->
-        <constructor-arg index="0" type="int">
-            <value>1</value>
-        </constructor-arg>
-        <constructor-arg index="1" type="java.lang.String">
-            <value>刘岩的userBean</value>
-        </constructor-arg>
+        <constructor-arg index="0" type="int" value="1"/>
+        <constructor-arg index="1" type="java.lang.String" value="userBean_ly"/>
 
         <!-- setter方法注入 -->
         <property name="id" value="2"/>
@@ -23,8 +19,9 @@
 
     </bean>
 
+
     <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanPostProcessor" />
 
-    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanFactoryPostProcessor" />
+    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanFactoryPostProcessorOfBeanLifeTest" />
 
 </beans>
