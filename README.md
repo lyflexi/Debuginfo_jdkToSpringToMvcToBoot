@@ -4,7 +4,7 @@ Java生Spring，Spring生万物，习得此库，打通任督二脉，相信你�
 记录了我的打怪升级之路，涵盖以下源码级调试案例：
 - jdk
 - springframework
-- springmvc
+- springmvc（含servlet）
 - springboot
 
 Debug环境：
