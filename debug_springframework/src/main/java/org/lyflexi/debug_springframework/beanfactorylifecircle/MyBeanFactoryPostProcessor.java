@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 @Component
-public class MyBeanFactoryPostProcessorOfIOCTest implements BeanFactoryPostProcessor {
+public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {

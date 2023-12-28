@@ -3,22 +3,21 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyInstantiationAwareBeanPostProcessor" />-->
+    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyInstantiationAwareBeanPostProcessor" />
 
-<!--    <bean id="userBean" class="org.lyflexi.debug_springframework.beanlifecircle.UserBean" init-method="myInit" destroy-method="myDestroy">-->
-<!--        &lt;!&ndash; 构造函数注入 &ndash;&gt;-->
-<!--        <constructor-arg index="0" type="java.lang.Integer" value="1"/>-->
-<!--        <constructor-arg index="1" type="java.lang.Integer" value="18"/>-->
+    <bean id="userBean" class="org.lyflexi.debug_springframework.beanlifecircle.UserBean" init-method="myInit" destroy-method="myDestroy">
+        <!-- 构造函数注入 -->
+        <constructor-arg index="0" type="java.lang.Integer" value="1"/>
+        <constructor-arg index="1" type="java.lang.Integer" value="18"/>
 
-<!--        &lt;!&ndash; setter方法注入 &ndash;&gt;-->
-<!--        <property name="id" value="2"/>-->
-<!--        <property name="age" value="19"/>-->
+        <!-- setter方法注入 -->
+        <property name="id" value="2"/>
+        <property name="age" value="19"/>
 
-<!--    </bean>-->
+    </bean>
 
 
-<!--    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanPostProcessor" />-->
-
-<!--    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanFactoryPostProcessorOfBeanLifeTest" />-->
+    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanPostProcessor" />
+    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanFactoryPostProcessor" />
 
 </beans>
