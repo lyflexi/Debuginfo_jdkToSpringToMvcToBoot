@@ -10,15 +10,30 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserBean implements InitializingBean, BeanNameAware, DisposableBean, ApplicationContextAware {
-    private int id;
 
-    private String name;
+    private Integer id;
 
-    public UserBean(int id, String name) {
+    private Integer age;
+
+    private PencilBean pencilBean;
+
+
+    public UserBean(Integer id, Integer age) {
         this.id = id;
-        this.name = name;
+        this.age = age;
         System.out.println("2. 调用构造函数");
     }
+    public UserBean() {
+
+    }
+    public UserBean(Integer id, Integer age,PencilBean pencilBean) {
+        this.id = id;
+        this.age = age;
+        this.pencilBean = pencilBean;
+        System.out.println("2. 调用构造函数");
+    }
+
+
 
     public int getId() {
         return id;
@@ -29,13 +44,13 @@ public class UserBean implements InitializingBean, BeanNameAware, DisposableBean
         System.out.println("5. 属性注入 id");
     }
 
-    public String getName() {
-        return name;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setName(String name) {
-        this.name = name;
-        System.out.println("5. 属性注入 name");
+    public void setAge(Integer age) {
+        this.age = age;
+        System.out.println("5. 属性注入 age");
     }
 
     @Override
@@ -46,7 +61,7 @@ public class UserBean implements InitializingBean, BeanNameAware, DisposableBean
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         UserBean userBean = (UserBean) applicationContext.getBean("userBean");
-        System.out.println("7. 调用 ApplicationContextAware.setApplicationContext() 方法"+userBean);
+        System.out.println("7. 调用 ApplicationContextAware.setApplicationContext() 方法" + userBean);
     }
 
     @Override
@@ -71,7 +86,8 @@ public class UserBean implements InitializingBean, BeanNameAware, DisposableBean
     public String toString() {
         return "UserBean{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", pencilBean="+pencilBean+
                 '}';
     }
 }

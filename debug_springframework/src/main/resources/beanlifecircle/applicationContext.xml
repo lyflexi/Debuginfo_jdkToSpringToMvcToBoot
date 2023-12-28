@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-	    http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd
-">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyInstantiationAwareBeanPostProcessor" />
+<!--    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyInstantiationAwareBeanPostProcessor" />-->
 
-    <bean id="userBean" class="org.lyflexi.debug_springframework.beanlifecircle.UserBean" init-method="myInit" destroy-method="myDestroy">
-        <!-- 构造函数注入 -->
-        <constructor-arg index="0" type="int" value="1"/>
-        <constructor-arg index="1" type="java.lang.String" value="userBean_ly"/>
+<!--    <bean id="userBean" class="org.lyflexi.debug_springframework.beanlifecircle.UserBean" init-method="myInit" destroy-method="myDestroy">-->
+<!--        &lt;!&ndash; 构造函数注入 &ndash;&gt;-->
+<!--        <constructor-arg index="0" type="java.lang.Integer" value="1"/>-->
+<!--        <constructor-arg index="1" type="java.lang.Integer" value="18"/>-->
 
-        <!-- setter方法注入 -->
-        <property name="id" value="2"/>
-        <property name="name" value="riemann"/>
+<!--        &lt;!&ndash; setter方法注入 &ndash;&gt;-->
+<!--        <property name="id" value="2"/>-->
+<!--        <property name="age" value="19"/>-->
 
-    </bean>
+<!--    </bean>-->
 
 
-    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanPostProcessor" />
+<!--    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanPostProcessor" />-->
 
-    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanFactoryPostProcessorOfBeanLifeTest" />
+<!--    <bean class="org.lyflexi.debug_springframework.beanlifecircle.MyBeanFactoryPostProcessorOfBeanLifeTest" />-->
 
 </beans>

@@ -24,12 +24,17 @@ public class MyInstantiationAwareBeanPostProcessor implements InstantiationAware
         return true;
     }
 
-    @Override
+    /*
+    注意：运行程序并没有打印setter注入是因为：
+    此处重写了InstantiationAwareBeanPostProcessor的postProcessProperties方法
+    * 导致setter注入失效
+    * */
+/*    @Override
     public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
         if ("userBean".equals(beanName)) {
             System.out.println("4. 调用 InstantiationAwareBeanPostProcessor.postProcessProperties() 方法");
         }
         return null;
-    }
+    }*/
 }
 
