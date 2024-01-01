@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 public class BeanLifeCycleTest {
+    //
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:beanlifecircle/applicationContext.xml");
