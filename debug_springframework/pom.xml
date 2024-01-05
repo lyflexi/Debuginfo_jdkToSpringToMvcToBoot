@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>debug_springframework</name>
     <description>debug_springframework</description>
+
     <properties>
         <java.version>17</java.version>
 
