@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springframework.beanfactorylifecircle;
+package org.lyflexi.debug_springframework.listener;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
