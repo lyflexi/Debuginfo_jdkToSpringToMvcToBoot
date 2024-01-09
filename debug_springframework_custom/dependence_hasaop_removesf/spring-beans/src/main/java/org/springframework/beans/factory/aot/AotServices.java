@@ -41,7 +41,7 @@ import org.springframework.util.ObjectUtils;
  *
  * @author Phillip Webb
  * @since 6.0
- * @param <T> the service type
+ * @param <T> the lyflexi.service type
  */
 public final class AotServices<T> implements Iterable<T> {
 
@@ -162,9 +162,9 @@ public final class AotServices<T> implements Iterable<T> {
 	}
 
 	/**
-	 * Find the AOT service that was loaded for the given bean name.
+	 * Find the AOT lyflexi.service that was loaded for the given bean name.
 	 * @param beanName the bean name
-	 * @return the AOT service or {@code null}
+	 * @return the AOT lyflexi.service or {@code null}
 	 */
 	@Nullable
 	public T findByBeanName(String beanName) {
@@ -172,14 +172,14 @@ public final class AotServices<T> implements Iterable<T> {
 	}
 
 	/**
-	 * Get the source of the given service.
-	 * @param service the service instance
-	 * @return the source of the service
+	 * Get the source of the given lyflexi.service.
+	 * @param service the lyflexi.service instance
+	 * @return the source of the lyflexi.service
 	 */
 	public Source getSource(T service) {
 		Source source = this.sources.get(service);
 		Assert.state(source != null,
-				() -> "Unable to find service " + ObjectUtils.identityToString(source));
+				() -> "Unable to find lyflexi.service " + ObjectUtils.identityToString(source));
 		return source;
 	}
 
@@ -203,8 +203,8 @@ public final class AotServices<T> implements Iterable<T> {
 
 		/**
 		 * Load all AOT services of the given type.
-		 * @param <T> the service type
-		 * @param type the service type
+		 * @param <T> the lyflexi.service type
+		 * @param type the lyflexi.service type
 		 * @return a new {@link AotServices} instance
 		 */
 		public <T> AotServices<T> load(Class<T> type) {
@@ -225,12 +225,12 @@ public final class AotServices<T> implements Iterable<T> {
 	public enum Source {
 
 		/**
-		 * An AOT service loaded from {@link SpringFactoriesLoader}.
+		 * An AOT lyflexi.service loaded from {@link SpringFactoriesLoader}.
 		 */
 		SPRING_FACTORIES_LOADER,
 
 		/**
-		 * An AOT service loaded from a {@link BeanFactory}.
+		 * An AOT lyflexi.service loaded from a {@link BeanFactory}.
 		 */
 		BEAN_FACTORY
 

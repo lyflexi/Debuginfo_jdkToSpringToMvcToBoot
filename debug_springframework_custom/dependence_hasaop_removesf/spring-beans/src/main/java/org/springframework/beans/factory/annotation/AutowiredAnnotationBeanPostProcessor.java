@@ -96,7 +96,7 @@ import org.springframework.util.StringUtils;
 /**
  * {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessor}
  * implementation that autowires annotated fields, setter methods, and arbitrary
- * config methods. Such members to be injected are detected through annotations:
+ * lyflexi.config methods. Such members to be injected are detected through annotations:
  * by default, Spring's {@link Autowired @Autowired} and {@link Value @Value}
  * annotations.
  *
@@ -120,17 +120,17 @@ import org.springframework.util.StringUtils;
  *
  * <h3>Autowired Fields</h3>
  * <p>Fields are injected right after construction of a bean, before any
- * config methods are invoked. Such a config field does not have to be public.
+ * lyflexi.config methods are invoked. Such a lyflexi.config field does not have to be public.
  *
  * <h3>Autowired Methods</h3>
  * <p>Config methods may have an arbitrary name and any number of arguments; each of
  * those arguments will be autowired with a matching bean in the Spring container.
  * Bean property setter methods are effectively just a special case of such a
- * general config method. Config methods do not have to be public.
+ * general lyflexi.config method. Config methods do not have to be public.
  *
  * <h3>Annotation Config vs. XML Config</h3>
  * <p>A default {@code AutowiredAnnotationBeanPostProcessor} will be registered
- * by the "context:annotation-config" and "context:component-scan" XML tags.
+ * by the "context:annotation-lyflexi.config" and "context:component-scan" XML tags.
  * Remove or turn off the default annotation configuration there if you intend
  * to specify a custom {@code AutowiredAnnotationBeanPostProcessor} bean definition.
  *
@@ -219,7 +219,7 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 
 	/**
 	 * Set the 'autowired' annotation type, to be used on constructors, fields,
-	 * setter methods, and arbitrary config methods.
+	 * setter methods, and arbitrary lyflexi.config methods.
 	 * <p>The default autowired annotation types are the Spring-provided
 	 * {@link Autowired @Autowired} and {@link Value @Value} annotations as well
 	 * as the common {@code @Inject} annotation, if available.
@@ -235,7 +235,7 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 
 	/**
 	 * Set the 'autowired' annotation types, to be used on constructors, fields,
-	 * setter methods, and arbitrary config methods.
+	 * setter methods, and arbitrary lyflexi.config methods.
 	 * <p>The default autowired annotation types are the Spring-provided
 	 * {@link Autowired @Autowired} and {@link Value @Value} annotations as well
 	 * as the common {@code @Inject} annotation, if available.
@@ -289,12 +289,12 @@ public class AutowiredAnnotationBeanPostProcessor implements SmartInstantiationA
 
 	@Override
 	public void postProcessMergedBeanDefinition(RootBeanDefinition beanDefinition, Class<?> beanType, String beanName) {
-		// Register externally managed config members on bean definition.
+		// Register externally managed lyflexi.config members on bean definition.
 		findInjectionMetadata(beanName, beanType, beanDefinition);
 
 		// Use opportunity to clear caches which are not needed after singleton instantiation.
 		// The injectionMetadataCache itself is left intact since it cannot be reliably
-		// reconstructed in terms of externally managed config members otherwise.
+		// reconstructed in terms of externally managed lyflexi.config members otherwise.
 		if (beanDefinition.isSingleton()) {
 			this.candidateConstructorsCache.remove(beanType);
 			// With actual lookup overrides, keep it intact along with bean definition.

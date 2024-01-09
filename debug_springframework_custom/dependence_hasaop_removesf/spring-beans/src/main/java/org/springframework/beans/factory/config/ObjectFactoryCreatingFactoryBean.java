@@ -39,7 +39,7 @@ import org.springframework.util.Assert;
  * property which directly returns only the one target bean (again, which is
  * typically a prototype bean).
  *
- * <p>A sample config in an XML-based
+ * <p>A sample lyflexi.config in an XML-based
  * {@link org.springframework.beans.factory.BeanFactory} might look as follows:
  *
  * <pre class="code">&lt;beans&gt;
@@ -48,7 +48,7 @@ import org.springframework.util.Assert;
  *   &lt;bean id="myService" class="a.b.c.MyService" scope="prototype"/&gt;
  *
  *   &lt;bean id="myServiceFactory"
- *       class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean"&gt;
+ *       class="org.springframework.beans.factory.lyflexi.config.ObjectFactoryCreatingFactoryBean"&gt;
  *     &lt;property name="targetBeanName"&gt;&lt;idref local="myService"/&gt;&lt;/property&gt;
  *   &lt;/bean&gt;
  *
@@ -75,8 +75,8 @@ import org.springframework.util.Assert;
  *
  *   public void someBusinessMethod() {
  *     // get a 'fresh', brand new MyService instance
- *     MyService service = this.myServiceFactory.getObject();
- *     // use the service object to effect the business logic...
+ *     MyService lyflexi.service = this.myServiceFactory.getObject();
+ *     // use the lyflexi.service object to effect the business logic...
  *   }
  * }</pre>
  *

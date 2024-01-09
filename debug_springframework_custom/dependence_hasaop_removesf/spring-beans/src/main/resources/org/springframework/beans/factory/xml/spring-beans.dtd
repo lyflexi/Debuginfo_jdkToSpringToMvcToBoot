@@ -167,7 +167,7 @@
 	getBean(). Default is "singleton".
 
 	Singletons are most commonly used, and are ideal for multi-threaded
-	service objects. Further scopes, such as "request" or "session",
+	lyflexi.service objects. Further scopes, such as "request" or "session",
 	might be supported by extended bean factories (for example, in a
 	web environment).
 

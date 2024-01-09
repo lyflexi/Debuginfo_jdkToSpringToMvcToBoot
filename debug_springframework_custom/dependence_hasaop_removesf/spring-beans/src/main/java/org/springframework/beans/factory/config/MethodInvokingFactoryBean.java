@@ -56,7 +56,7 @@ import org.springframework.lang.Nullable;
  * which uses this class to call a static factory method:
  *
  * <pre class="code">
- * &lt;bean id="myObject" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"&gt;
+ * &lt;bean id="myObject" class="org.springframework.beans.factory.lyflexi.config.MethodInvokingFactoryBean"&gt;
  *   &lt;property name="staticMethod" value="com.whatever.MyClassFactory.getInstance"/&gt;
  * &lt;/bean&gt;</pre>
  *
@@ -64,12 +64,12 @@ import org.springframework.lang.Nullable;
  * Java system property. Somewhat verbose, but it works.
  *
  * <pre class="code">
- * &lt;bean id="sysProps" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"&gt;
+ * &lt;bean id="sysProps" class="org.springframework.beans.factory.lyflexi.config.MethodInvokingFactoryBean"&gt;
  *   &lt;property name="targetClass" value="java.lang.System"/&gt;
  *   &lt;property name="targetMethod" value="getProperties"/&gt;
  * &lt;/bean&gt;
  *
- * &lt;bean id="javaVersion" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"&gt;
+ * &lt;bean id="javaVersion" class="org.springframework.beans.factory.lyflexi.config.MethodInvokingFactoryBean"&gt;
  *   &lt;property name="targetObject" ref="sysProps"/&gt;
  *   &lt;property name="targetMethod" value="getProperty"/&gt;
  *   &lt;property name="arguments" value="java.version"/&gt;

@@ -103,7 +103,7 @@
 			ConfigurableEnvironment#setDefaultProfiles(String...)
 
 		Properties (typically through -D system properties, environment variables, or
-		servlet context init params):
+		servlet_initializer context init params):
 			spring.profiles.active=p1,p2
 			spring.profiles.default=p1,p2
 					]]></xsd:documentation>
@@ -307,7 +307,7 @@
 	bean definition in which case it will inherit the parent's scope.
 
 	Singletons are most commonly used, and are ideal for multi-threaded
-	service objects. Further scopes, such as "request" or "session", might
+	lyflexi.service objects. Further scopes, such as "request" or "session", might
 	be supported by extended bean factories (e.g. in a web environment).
 
 	Inner bean definitions inherit the scope of their containing bean
@@ -539,7 +539,7 @@
 
 	<xsd:element name="bean">
 		<xsd:annotation>
-			<xsd:documentation source="java:org.springframework.beans.factory.config.BeanDefinition"><![CDATA[
+			<xsd:documentation source="java:org.springframework.beans.factory.lyflexi.config.BeanDefinition"><![CDATA[
 	Defines a single (usually named) bean.
 
 	A bean definition may contain nested tags for constructor arguments,
@@ -559,7 +559,7 @@
 
 	<xsd:element name="constructor-arg">
 		<xsd:annotation>
-			<xsd:documentation source="java:org.springframework.beans.factory.config.ConstructorArgumentValues">
+			<xsd:documentation source="java:org.springframework.beans.factory.lyflexi.config.ConstructorArgumentValues">
 				<![CDATA[
 	Bean definitions can specify zero or more constructor arguments.
 	This is an alternative to "autowire constructor".

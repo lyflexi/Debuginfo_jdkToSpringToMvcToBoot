@@ -22,7 +22,7 @@ import org.springframework.beans.factory.BeanClassLoaderAware;
 
 /**
  * {@link org.springframework.beans.factory.FactoryBean} that exposes the
- * JDK 1.6 {@link java.util.ServiceLoader} for the configured service class.
+ * JDK 1.6 {@link java.util.ServiceLoader} for the configured lyflexi.service class.
  *
  * @author Juergen Hoeller
  * @since 2.5

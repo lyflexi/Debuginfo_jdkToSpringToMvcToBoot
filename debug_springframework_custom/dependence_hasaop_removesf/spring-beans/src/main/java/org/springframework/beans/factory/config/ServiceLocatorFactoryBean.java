@@ -42,12 +42,12 @@ import org.springframework.util.StringUtils;
  * and creates a dynamic proxy which implements that interface, delegating to an
  * underlying {@link org.springframework.beans.factory.BeanFactory}.
  *
- * <p>Such service locators permit the decoupling of calling code from
+ * <p>Such lyflexi.service locators permit the decoupling of calling code from
  * the {@link org.springframework.beans.factory.BeanFactory} API, by using an
  * appropriate custom locator interface. They will typically be used for
  * <b>prototype beans</b>, i.e. for factory methods that are supposed to
  * return a new instance for each call. The client receives a reference to the
- * service locator via setter or constructor injection, to be able to invoke
+ * lyflexi.service locator via setter or constructor injection, to be able to invoke
  * the locator's factory methods on demand. <b>For singleton beans, direct
  * setter or constructor injection of the target bean is preferable.</b>
  *
@@ -68,9 +68,9 @@ import org.springframework.util.StringUtils;
  * {@code toString}. The resulting String can be used as bean name as-is,
  * provided that corresponding beans are defined in the bean factory.
  * Alternatively, {@linkplain #setServiceMappings(java.util.Properties) a custom
- * mapping} between service IDs and bean names can be defined.
+ * mapping} between lyflexi.service IDs and bean names can be defined.
  *
- * <p>By way of an example, consider the following service locator interface.
+ * <p>By way of an example, consider the following lyflexi.service locator interface.
  * Note that this interface is not dependent on any Spring APIs.
  *
  * <pre class="code">package a.b.c;
@@ -80,7 +80,7 @@ import org.springframework.util.StringUtils;
  *    public MyService getService();
  *}</pre>
  *
- * <p>A sample config in an XML-based
+ * <p>A sample lyflexi.config in an XML-based
  * {@link org.springframework.beans.factory.BeanFactory} might look as follows:
  *
  * <pre class="code">&lt;beans&gt;
@@ -90,7 +90,7 @@ import org.springframework.util.StringUtils;
  *
  *   &lt;!-- will lookup the above 'myService' bean by *TYPE* --&gt;
  *   &lt;bean id="myServiceFactory"
- *            class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean"&gt;
+ *            class="org.springframework.beans.factory.lyflexi.config.ServiceLocatorFactoryBean"&gt;
  *     &lt;property name="serviceLocatorInterface" value="a.b.c.ServiceFactory"/&gt;
  *   &lt;/bean&gt;
  *
@@ -116,13 +116,13 @@ import org.springframework.util.StringUtils;
  *
  *    public void someBusinessMethod() {
  *        // get a 'fresh', brand new MyService instance
- *        MyService service = this.myServiceFactory.getService();
- *        // use the service object to effect the business logic...
+ *        MyService lyflexi.service = this.myServiceFactory.getService();
+ *        // use the lyflexi.service object to effect the business logic...
  *    }
  *}</pre>
  *
  * <p>By way of an example that looks up a bean <b>by name</b>, consider
- * the following service locator interface. Again, note that this
+ * the following lyflexi.service locator interface. Again, note that this
  * interface is not dependent on any Spring APIs.
  *
  * <pre class="code">package a.b.c;
@@ -132,7 +132,7 @@ import org.springframework.util.StringUtils;
  *    public MyService getService (String serviceName);
  *}</pre>
  *
- * <p>A sample config in an XML-based
+ * <p>A sample lyflexi.config in an XML-based
  * {@link org.springframework.beans.factory.BeanFactory} might look as follows:
  *
  * <pre class="code">&lt;beans&gt;
@@ -142,7 +142,7 @@ import org.springframework.util.StringUtils;
  *   &lt;bean id="anotherService" class="a.b.c.AnotherService" singleton="false"/&gt;
  *
  *   &lt;bean id="myServiceFactory"
- *            class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean"&gt;
+ *            class="org.springframework.beans.factory.lyflexi.config.ServiceLocatorFactoryBean"&gt;
  *     &lt;property name="serviceLocatorInterface" value="a.b.c.ServiceFactory"/&gt;
  *   &lt;/bean&gt;
  *
@@ -168,14 +168,14 @@ import org.springframework.util.StringUtils;
  *
  *    public void someBusinessMethod() {
  *        // get a 'fresh', brand new MyService instance
- *        MyService service = this.myServiceFactory.getService("specialService");
- *        // use the service object to effect the business logic...
+ *        MyService lyflexi.service = this.myServiceFactory.getService("specialService");
+ *        // use the lyflexi.service object to effect the business logic...
  *    }
  *
  *    public void anotherBusinessMethod() {
  *        // get a 'fresh', brand new MyService instance
- *        MyService service = this.myServiceFactory.getService("anotherService");
- *        // use the service object to effect the business logic...
+ *        MyService lyflexi.service = this.myServiceFactory.getService("anotherService");
+ *        // use the lyflexi.service object to effect the business logic...
  *    }
  *}</pre>
  *
@@ -207,7 +207,7 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 
 
 	/**
-	 * Set the service locator interface to use, which must have one or more methods with
+	 * Set the lyflexi.service locator interface to use, which must have one or more methods with
 	 * the signatures {@code MyType xxx()} or {@code MyType xxx(MyIdType id)}
 	 * (typically, {@code MyService getService()} or {@code MyService getService(String id)}).
 	 * See the {@link ServiceLocatorFactoryBean class-level Javadoc} for
@@ -218,7 +218,7 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 	}
 
 	/**
-	 * Set the exception class that the service locator should throw if service
+	 * Set the exception class that the lyflexi.service locator should throw if lyflexi.service
 	 * lookup failed. The specified exception class must have a constructor
 	 * with one of the following parameter types: {@code (String, Throwable)}
 	 * or {@code (Throwable)} or {@code (String)}.
@@ -235,14 +235,14 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 	}
 
 	/**
-	 * Set mappings between service ids (passed into the service locator)
+	 * Set mappings between lyflexi.service ids (passed into the lyflexi.service locator)
 	 * and bean names (in the bean factory). Service ids that are not defined
 	 * here will be treated as bean names as-is.
-	 * <p>The empty string as service id key defines the mapping for {@code null} and
+	 * <p>The empty string as lyflexi.service id key defines the mapping for {@code null} and
 	 * empty string, and for factory methods without parameter. If not defined,
 	 * a single matching bean will be retrieved from the bean factory.
-	 * @param serviceMappings mappings between service ids and bean names,
-	 * with service ids as keys as bean names as values
+	 * @param serviceMappings mappings between lyflexi.service ids and bean names,
+	 * with lyflexi.service ids as keys as bean names as values
 	 */
 	public void setServiceMappings(Properties serviceMappings) {
 		this.serviceMappings = serviceMappings;
@@ -263,7 +263,7 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 			throw new IllegalArgumentException("Property 'serviceLocatorInterface' is required");
 		}
 
-		// Create service locator proxy.
+		// Create lyflexi.service locator proxy.
 		this.proxy = Proxy.newProxyInstance(
 				this.serviceLocatorInterface.getClassLoader(),
 				new Class<?>[] {this.serviceLocatorInterface},
@@ -272,8 +272,8 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 
 
 	/**
-	 * Determine the constructor to use for the given service locator exception
-	 * class. Only called in case of a custom service locator exception.
+	 * Determine the constructor to use for the given lyflexi.service locator exception
+	 * class. Only called in case of a custom lyflexi.service locator exception.
 	 * <p>The default implementation looks for a constructor with one of the
 	 * following parameter types: {@code (String, Throwable)}
 	 * or {@code (Throwable)} or {@code (String)}.
@@ -304,13 +304,13 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 	}
 
 	/**
-	 * Create a service locator exception for the given cause.
-	 * Only called in case of a custom service locator exception.
+	 * Create a lyflexi.service locator exception for the given cause.
+	 * Only called in case of a custom lyflexi.service locator exception.
 	 * <p>The default implementation can handle all variations of
 	 * message and exception arguments.
 	 * @param exceptionConstructor the constructor to use
-	 * @param cause the cause of the service lookup failure
-	 * @return the service locator exception to throw
+	 * @param cause the cause of the lyflexi.service lookup failure
+	 * @return the lyflexi.service locator exception to throw
 	 * @see #setServiceLocatorExceptionClass
 	 */
 	protected Exception createServiceLocatorException(Constructor<Exception> exceptionConstructor, BeansException cause) {
@@ -346,7 +346,7 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 
 
 	/**
-	 * Invocation handler that delegates service locator calls to the bean factory.
+	 * Invocation handler that delegates lyflexi.service locator calls to the bean factory.
 	 */
 	private class ServiceLocatorInvocationHandler implements InvocationHandler {
 
@@ -357,7 +357,7 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 				return (proxy == args[0]);
 			}
 			else if (ReflectionUtils.isHashCodeMethod(method)) {
-				// Use hashCode of service locator proxy.
+				// Use hashCode of lyflexi.service locator proxy.
 				return System.identityHashCode(proxy);
 			}
 			else if (ReflectionUtils.isToStringMethod(method)) {
@@ -391,7 +391,7 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 		}
 
 		/**
-		 * Check whether a service id was passed in.
+		 * Check whether a lyflexi.service id was passed in.
 		 */
 		private String tryGetBeanName(@Nullable Object[] args) {
 			String beanName = "";
@@ -409,12 +409,12 @@ public class ServiceLocatorFactoryBean implements FactoryBean<Object>, BeanFacto
 		}
 
 		private Class<?> getServiceLocatorMethodReturnType(Method method) throws NoSuchMethodException {
-			Assert.state(serviceLocatorInterface != null, "No service locator interface specified");
+			Assert.state(serviceLocatorInterface != null, "No lyflexi.service locator interface specified");
 			Class<?>[] paramTypes = method.getParameterTypes();
 			Method interfaceMethod = serviceLocatorInterface.getMethod(method.getName(), paramTypes);
 			Class<?> serviceLocatorReturnType = interfaceMethod.getReturnType();
 
-			// Check whether the method is a valid service locator.
+			// Check whether the method is a valid lyflexi.service locator.
 			if (paramTypes.length > 1 || void.class == serviceLocatorReturnType) {
 				throw new UnsupportedOperationException(
 						"May only call methods with signature '<type> xxx()' or '<type> xxx(<idtype> id)' " +

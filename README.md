@@ -13,5 +13,8 @@ Java生servlet，servlet生spring，Spring生万物，习得此库，打通任�
 Debug环境：
 - Java17
 - spring 6.1.2
+- tomcat 10.1.7
+- jakarta.servlet-api 5.0.0
+- springmvc 6.1.2
 - springboot 3.2.1
 - IDEA.2023.3.2
