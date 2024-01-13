@@ -18,7 +18,8 @@ Debug环境：
 - Java17
 - spring 6.1.2
 - tomcat 10.1.7
-- jakarta.servlet-api 5.0.0
+- servlet3.0+
+- jakarta.servlet-api 5.0.0（对应于tomcat10+）
 - springmvc 6.1.2
 - springboot 3.2.1
 - IDEA.2023.3.2
