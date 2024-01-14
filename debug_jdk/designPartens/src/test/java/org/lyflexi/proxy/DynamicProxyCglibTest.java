@@ -2,7 +2,8 @@ package org.lyflexi.proxy;
 
 
 import net.sf.cglib.proxy.MethodInterceptor;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.lyflexi.proxy.dynamic_proxy_cglib.dao.IUserDao;
 import org.lyflexi.proxy.dynamic_proxy_cglib.proxy.DaoMethodInterceptor;
 import org.lyflexi.proxy.dynamic_proxy_cglib.proxy.DaoProxyFactory;

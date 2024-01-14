@@ -1,6 +1,7 @@
 package org.lyflexi.proxy;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.lyflexi.proxy.static_proxy.dao.IUserDao;
 import org.lyflexi.proxy.static_proxy.dao.impl.UserDaoImpl;
 import org.lyflexi.debug_jdk.design_partens.proxy.static_proxy.proxy.UserDaoProxy;

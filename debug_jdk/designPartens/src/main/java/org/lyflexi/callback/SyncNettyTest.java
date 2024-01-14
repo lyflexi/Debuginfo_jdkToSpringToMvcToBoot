@@ -1,4 +1,4 @@
-package org.lyflexi.debug_jdk.design_partens.callback;
+package org.lyflexi.callback;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ public class SyncNettyTest {
     private static ExecutorService es = Executors.newFixedThreadPool(2);
 
 
-    public static void sysFunc(final ICallback callback) {
+    public static void sysFunc(final org.lyflexi.debug_jdk.design_partens.callback.ICallback callback) {
         Callable<Netty> c = new Callable<Netty>() {
 
             @Override

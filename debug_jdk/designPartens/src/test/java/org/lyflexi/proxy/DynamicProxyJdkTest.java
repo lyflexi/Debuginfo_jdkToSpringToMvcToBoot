@@ -1,7 +1,7 @@
 package org.lyflexi.proxy;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.lyflexi.proxy.dynamic_proxy_jdk.mapper.UserMapper;
 import org.lyflexi.proxy.dynamic_proxy_jdk.proxy.MapperProxy;
 import org.lyflexi.proxy.dynamic_proxy_jdk.proxy.MapperProxyFactory;
