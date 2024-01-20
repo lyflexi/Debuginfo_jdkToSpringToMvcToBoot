@@ -21,9 +21,9 @@
 
     <bean id="myAspect" class="org.lyflexi.circle.MyAspect"/>
 
-    <aop:lyflexi.config>
+    <aop:config>
         <aop:aspect ref="myAspect">
             <aop:before method="before" pointcut="execution(public void org.lyflexi.circle.*.sayHello(..))"/>
         </aop:aspect>
-    </aop:lyflexi.config>
+    </aop:config>
 </beans>

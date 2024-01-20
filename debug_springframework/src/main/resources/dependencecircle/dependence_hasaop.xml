@@ -17,9 +17,9 @@
 
     <bean id="myAspect" class="org.lyflexi.debug_springframework.dependencecircle.dependence_hasaop.MyAspect"/>
 
-    <aop:lyflexi.config>
+    <aop:config>
         <aop:aspect ref="myAspect">
             <aop:before method="before" pointcut="execution(public void org.lyflexi.debug_springframework.dependencecircle.dependence_hasaop.*.sayHello(..))"/>
         </aop:aspect>
-    </aop:lyflexi.config>
+    </aop:config>
 </beans>
