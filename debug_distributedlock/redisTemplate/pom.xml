@@ -9,17 +9,17 @@
 <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <groupId>org.lyflexi</groupId>
-    <artifactId>jvmlock</artifactId>
+    <artifactId>redisTemplate</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jvmlock</name>
-    <description>jvmlock</description>
+    <name>redisTemplate</name>
+    <description>redisTemplate</description>
     <properties>
         <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <dependency>
