@@ -21,6 +21,8 @@
         <module>a-rocketmq-demo</module>
         <module>bootrocketmq_producer</module>
         <module>bootrocketmq_consumer</module>
+        <module>seckill_web</module>
+        <module>seckill_service</module>
     </modules>
     <dependencies>
         <dependency>
@@ -50,7 +52,6 @@
             <version>4.9.2</version>
         </dependency>
 
-
         <!--bootmq-->
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
@@ -61,6 +62,13 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>2.0.25</version>
+        </dependency>
+        <!--新版@Resource-->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
