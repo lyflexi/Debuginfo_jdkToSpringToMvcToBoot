@@ -1,11 +1,14 @@
 package org.lyflexi.jvmlock.service;
 
 import org.lyflexi.jvmlock.pojo.Stock;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.locks.ReentrantLock;
 
 @Service
+//@Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class StockService {
 
     private Stock stock = new Stock();
