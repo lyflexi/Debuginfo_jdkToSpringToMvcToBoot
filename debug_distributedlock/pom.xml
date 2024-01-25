@@ -19,6 +19,7 @@
 		<module>redisHandsonDistriLock</module>
 		<module>redissonClient</module>
 		<module>zkHandsonDistriLock</module>
+		<module>zkCurator</module>
 	</modules>
 	<properties>
 		<java.version>17</java.version>
