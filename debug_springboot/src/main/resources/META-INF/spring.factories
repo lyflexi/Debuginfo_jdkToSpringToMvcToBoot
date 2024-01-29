@@ -1,0 +1,4 @@
+#org.springframework.boot.SpringApplicationRunListener=org.lyflexi.debug_springboot.lifecircleAndlistener.MyRunListener
+#org.springframework.context.ApplicationListener=org.lyflexi.debug_springboot.lifecircleAndlistener.MyListener
+org.springframework.context.ApplicationContextInitializer = org.lyflexi.debug_springboot.specificlistener.MyApplicationContextInitializer
+org.springframework.boot.BootstrapRegistryInitializer =org.lyflexi.debug_springboot.specificlistener.MyBootstrapRegistryInitializer

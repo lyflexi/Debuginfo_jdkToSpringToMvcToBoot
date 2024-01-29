@@ -22,6 +22,8 @@ Java生spring，spring生万物，习得此库，打通任督二脉，相信你�
   - Curator4.3
 - springcloud系列(...)
 
+配套笔记参见：https://github.com/lyflexi/obsidianNotes
+
 
 
 

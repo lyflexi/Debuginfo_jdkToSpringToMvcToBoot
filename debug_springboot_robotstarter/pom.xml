@@ -5,23 +5,34 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.1</version>
+        <version>3.2.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.lyflexi</groupId>
-    <artifactId>debug_springboot</artifactId>
+    <artifactId>debug_springboot_robotstarter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>debug_springboot</name>
-    <description>debug_springboot</description>
+    <name>debug_springboot_robotstarter</name>
+    <description>debug_springboot_robotstarter</description>
+    <modules>
+        <module>firstlevel_robotstarter</module>
+        <module>secondlevel_robotstarter</module>
+        <module>thirdlevel_robotstarter</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
+    <packaging>pom</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -31,39 +42,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <!--        支持返回XML格式数据-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-        </dependency>
-
-        <!--        支持返回YAML格式数据-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-yaml</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.lyflexi</groupId>-->
-<!--            <artifactId>firstlevel_robotstarter</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.lyflexi</groupId>-->
-<!--            <artifactId>secondlevel_robotstarter</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.lyflexi</groupId>
-            <artifactId>thirdlevel_robotstarter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
