@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.Map;
 
-public class Proxy {
+public class ProxyFactory {
 
     private static final String ENTER = "\r\n";
     private static final String TAB_STR = "    ";

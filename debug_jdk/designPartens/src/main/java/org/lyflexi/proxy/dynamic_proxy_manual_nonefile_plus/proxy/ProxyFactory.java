@@ -4,8 +4,6 @@ import com.itranswarp.compiler.JavaStringCompiler;
 import org.lyflexi.proxy.dynamic_proxy_manual_nonefile_plus.mapper.UserMapper;
 
 
-import java.io.File;
-import java.io.FileWriter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
@@ -13,20 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Proxy {
+public class ProxyFactory {
 
     private static final String ENTER = "\r\n";
     private static final String TAB_STR = "    ";
     private static final String PROXY_FILE_NAME = "$Proxy0";
     private static final Class<?>[] constructorParams = { InvocationHandler.class };
-    private static final String PROXY_PACKAGE_NAME = Proxy.class.getPackage().getName();
+    private static final String PROXY_PACKAGE_NAME = ProxyFactory.class.getPackage().getName();
 
     /**
      * 生成接口实现类的源代码
      * @param interface_
      * @throws Exception
      */
-    private static String generateJavaFile(Class<?> interface_, InvocationHandler handler) throws Exception {
+    private static String generateJavaFile(Class<?> interface_) throws Exception {
         StringBuilder proxyJava = new StringBuilder();
         proxyJava.append("package ").append(PROXY_PACKAGE_NAME).append(";").append(ENTER).append(ENTER)
                 .append("import java.lang.reflect.Method;").append(ENTER).append(ENTER)
@@ -79,14 +77,14 @@ public class Proxy {
         proxyJava .append("}");
 
         // 这里可以将字符串生成java文件，看看源代码对不对
-        /*String proxyJavaFileDir = System.getProperty("user.dir") + File.separator + "proxy-none-java-file-plus"
-                + String.join(File.separator, new String[]{"","src","main","java",""})
-                + PROXY_PACKAGE_NAME.replace(".", File.separator) + File.separator;
-        File f = new File(proxyJavaFileDir + PROXY_FILE_NAME + ".java");
-        FileWriter fw = new FileWriter(f);
-        fw.write(proxyJava.toString());
-        fw.flush();
-        fw.close();*/
+//        String proxyJavaFileDir = System.getProperty("user.dir") + File.separator + ""
+//                + String.join(File.separator, new String[]{"","src","main","java",""})
+//                + PROXY_PACKAGE_NAME.replace(".", File.separator) + File.separator;
+//        File f = new File(proxyJavaFileDir + PROXY_FILE_NAME + ".java");
+//        FileWriter fw = new FileWriter(f);
+//        fw.write(proxyJava.toString());
+//        fw.flush();
+//        fw.close();
 
         return proxyJava.toString();
     }
@@ -101,7 +99,7 @@ public class Proxy {
     public static <T> T newInstance(Class<T> interface_, InvocationHandler handler) throws Exception{
 
         // 1、生成源代码字符串
-        String proxyCodeStr = generateJavaFile(interface_, handler);
+        String proxyCodeStr = generateJavaFile(interface_);
 
         // 2、字符串编译成Class对象
         Class<?> clz = compile(PROXY_PACKAGE_NAME + "." + PROXY_FILE_NAME, proxyCodeStr);
@@ -109,14 +107,4 @@ public class Proxy {
         return (T)cons.newInstance(new Object[]{handler});
     }
 
-    public static void main(String[] args) throws Exception {
-        generateJavaFile(UserMapper.class, new InvocationHandler() {
-            @Override
-            public Object invoke(Object proxy, Method method, Object[] args) {
-                return null;
-            }
-        });
-
-        //System.out.println(InvocationHandler.class.getName());
-    }
 }

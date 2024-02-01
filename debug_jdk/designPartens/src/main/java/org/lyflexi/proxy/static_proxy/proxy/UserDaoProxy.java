@@ -1,4 +1,4 @@
-package org.lyflexi.debug_jdk.design_partens.proxy.static_proxy.proxy;
+package org.lyflexi.debug_jdk.design_partens.static_proxy.proxy;
 
 
 import org.lyflexi.proxy.static_proxy.dao.IUserDao;
