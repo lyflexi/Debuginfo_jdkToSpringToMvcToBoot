@@ -1,15 +1,17 @@
-package nio.c2;
+package nio.c2ByteBuffer;
+
+import config.Dictionaries;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-import static nio.c2.ByteBufferUtil.debugAll;
+import static nio.c2ByteBuffer.ByteBufferUtil.debugAll;
 
 public class TestScatteringReads {
     public static void main(String[] args) {
-        try (FileChannel channel = new RandomAccessFile("words.txt", "r").getChannel()) {
+        try (FileChannel channel = new RandomAccessFile(Dictionaries.pathRoot+"words.txt", "r").getChannel()) {
             ByteBuffer b1 = ByteBuffer.allocate(3);
             ByteBuffer b2 = ByteBuffer.allocate(3);
             ByteBuffer b3 = ByteBuffer.allocate(5);

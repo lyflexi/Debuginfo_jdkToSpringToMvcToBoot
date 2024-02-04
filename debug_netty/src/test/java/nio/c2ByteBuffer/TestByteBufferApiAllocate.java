@@ -1,8 +1,8 @@
-package nio.c2;
+package nio.c2ByteBuffer;
 
 import java.nio.ByteBuffer;
 
-public class TestByteBufferAllocate {
+public class TestByteBufferApiAllocate {
     public static void main(String[] args) {
         System.out.println(ByteBuffer.allocate(16).getClass());
         System.out.println(ByteBuffer.allocateDirect(16).getClass());

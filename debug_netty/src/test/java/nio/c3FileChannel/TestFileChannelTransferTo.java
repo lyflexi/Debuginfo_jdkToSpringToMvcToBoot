@@ -1,4 +1,4 @@
-package nio.c3;
+package nio.c3FileChannel;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

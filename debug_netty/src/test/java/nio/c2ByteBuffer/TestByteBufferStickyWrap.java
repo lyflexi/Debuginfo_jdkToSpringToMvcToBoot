@@ -1,11 +1,11 @@
-package nio.c2;
+package nio.c2ByteBuffer;
 
 import java.nio.ByteBuffer;
 
-import static nio.c2.ByteBufferUtil.debugAll;
+import static nio.c2ByteBuffer.ByteBufferUtil.debugAll;
 
 
-public class TestByteBufferExam {
+public class TestByteBufferStickyWrap {
     public static void main(String[] args) {
          /*
          网络上有多条数据发送给服务端，数据之间使用 \n 进行分隔
@@ -28,13 +28,14 @@ public class TestByteBufferExam {
     private static void split(ByteBuffer source) {
         source.flip();
         for (int i = 0; i < source.limit(); i++) {
-            // 找到一条完整消息
+            // 找到一条完整消息，get(i)不会导致position指针的移动
             if (source.get(i) == '\n') {
                 int length = i + 1 - source.position();
                 // 把这条完整消息存入新的 ByteBuffer
                 ByteBuffer target = ByteBuffer.allocate(length);
                 // 从 source 读，向 target 写
                 for (int j = 0; j < length; j++) {
+                    //这里的get()会导致position指针的移动
                     target.put(source.get());
                 }
                 debugAll(target);

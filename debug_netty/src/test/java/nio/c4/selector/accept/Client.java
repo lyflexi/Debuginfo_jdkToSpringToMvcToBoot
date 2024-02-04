@@ -1,4 +1,4 @@
-package nio.c4;
+package nio.c4.selector.accept;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

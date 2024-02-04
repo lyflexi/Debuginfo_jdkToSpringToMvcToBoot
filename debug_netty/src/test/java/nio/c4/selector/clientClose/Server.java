@@ -1,4 +1,4 @@
-package nio.c4;
+package nio.c4.selector.clientClose;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -8,6 +8,8 @@ import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.nio.charset.Charset;
 import java.util.Iterator;
+
+import static nio.c2ByteBuffer.ByteBufferUtil.debugAll;
 
 @Slf4j
 public class Server {
@@ -31,6 +33,7 @@ public class Server {
             // 4. 处理事件, selectedKeys 内部包含了所有发生的事件
             Iterator<SelectionKey> iter = selector.selectedKeys().iterator(); // accept, read
             while (iter.hasNext()) {
+
                 SelectionKey key = iter.next();
                 // 处理key 时，要从 selectedKeys 集合中删除，否则下次处理就会有问题
                 iter.remove();
@@ -54,7 +57,7 @@ public class Server {
                             key.cancel();
                         } else {
                             buffer.flip();
-//                            debugAll(buffer);
+                            debugAll(buffer);
                             System.out.println(Charset.defaultCharset().decode(buffer));
                         }
                     } catch (IOException e) {

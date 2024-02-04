@@ -1,4 +1,4 @@
-package nio.c4;
+package nio.c4.selector.write;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

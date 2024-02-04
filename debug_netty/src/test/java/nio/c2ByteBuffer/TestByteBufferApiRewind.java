@@ -1,9 +1,9 @@
-package nio.c2;
+package nio.c2ByteBuffer;
 
 import java.nio.ByteBuffer;
-import static nio.c2.ByteBufferUtil.debugAll;
+import static nio.c2ByteBuffer.ByteBufferUtil.debugAll;
 
-public class TestByteBufferRead {
+public class TestByteBufferApiRewind {
 
     public static void main(String[] args) {
         ByteBuffer buffer = ByteBuffer.allocate(10);

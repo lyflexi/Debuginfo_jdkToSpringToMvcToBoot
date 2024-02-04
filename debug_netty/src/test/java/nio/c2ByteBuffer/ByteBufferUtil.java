@@ -1,4 +1,4 @@
-package nio.c2;
+package nio.c2ByteBuffer;
 
 import io.netty.util.internal.StringUtil;
 

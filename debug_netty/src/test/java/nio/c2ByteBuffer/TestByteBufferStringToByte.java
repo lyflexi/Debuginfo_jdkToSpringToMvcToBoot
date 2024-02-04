@@ -1,12 +1,12 @@
-package nio.c2;
+package nio.c2ByteBuffer;
 
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 
-import static nio.c2.ByteBufferUtil.debugAll;
+import static nio.c2ByteBuffer.ByteBufferUtil.debugAll;
 
-public class TestByteBufferString {
+public class TestByteBufferStringToByte {
     public static void main(String[] args) {
         // 1. 字符串转为 ByteBuffer
         ByteBuffer buffer1 = ByteBuffer.allocate(16);
