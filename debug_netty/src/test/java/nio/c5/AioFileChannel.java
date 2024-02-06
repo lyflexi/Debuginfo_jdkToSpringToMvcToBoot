@@ -1,5 +1,6 @@
 package nio.c5;
 
+import config.Dictionaries;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -14,10 +15,10 @@ import static nio.c2ByteBuffer.ByteBufferUtil.debugAll;
 @Slf4j
 public class AioFileChannel {
     public static void main(String[] args) throws IOException {
-        try (AsynchronousFileChannel channel = AsynchronousFileChannel.open(Paths.get("data.txt"), StandardOpenOption.READ)) {
+        try (AsynchronousFileChannel channel = AsynchronousFileChannel.open(Paths.get(Dictionaries.pathRoot+"data.txt"), StandardOpenOption.READ)) {
             // 参数1 ByteBuffer
             // 参数2 读取的起始位置
-            // 参数3 附件
+            // 参数3 附件,万一一次读不完，就需要用这个附件接着读
             // 参数4 回调对象 CompletionHandler
             ByteBuffer buffer = ByteBuffer.allocate(16);
             log.debug("read begin...");
@@ -37,6 +38,6 @@ public class AioFileChannel {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.in.read();
+        System.in.read();//主线程不能提前结束，否则守护线程（子线程）也会提前终止
     }
 }

@@ -69,11 +69,12 @@ public class MultiThreadServer {
             sc.register(selector, SelectionKey.OP_READ, null); // boss
         }
 
+        /*start()方法是多线程编程的关键，JVM会创建一个新的线程，并在这个新线程中调用run()方法。而Runnable接口的run()方法则是普通的方法调用*/
         @Override
         public void run() {
             while(true) {
                 try {
-                    selector.select(); // worker-0  阻塞
+                    selector.select(); // 如果接收不到可读事件，则worker-0阻塞
                     Iterator<SelectionKey> iter = selector.selectedKeys().iterator();
                     while (iter.hasNext()) {
                         SelectionKey key = iter.next();
