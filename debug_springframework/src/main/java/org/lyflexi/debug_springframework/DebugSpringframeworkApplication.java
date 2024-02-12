@@ -1,5 +1,6 @@
 package org.lyflexi.debug_springframework;
 
+import cn.hutool.extra.spring.EnableSpringUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
