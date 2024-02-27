@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springframework.beanfactorylifecircle;
+package org.lyflexi.debug_springframework.factoryProcessor;
 
 public class Blue {
 	

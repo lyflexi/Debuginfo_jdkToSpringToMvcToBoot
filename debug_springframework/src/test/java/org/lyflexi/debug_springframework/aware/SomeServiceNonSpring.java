@@ -1,9 +1,7 @@
 package org.lyflexi.debug_springframework.aware;
 
 import cn.hutool.extra.spring.SpringUtil;
-import org.lyflexi.debug_springframework.beanfactorylifecircle.ExtConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Author: ly

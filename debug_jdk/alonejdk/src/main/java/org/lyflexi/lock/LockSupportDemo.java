@@ -20,7 +20,7 @@ public class LockSupportDemo {
         }, "t1");
         t1.start();
 
-        //暂停几秒钟线程
+        //无需暂停线程，及时先执行unpark(t1)，后执行park()也不会报异常
         //try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
 
         new Thread(() -> {

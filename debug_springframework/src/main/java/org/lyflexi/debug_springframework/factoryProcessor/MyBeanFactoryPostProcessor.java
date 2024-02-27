@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springframework.beanfactorylifecircle;
+package org.lyflexi.debug_springframework.factoryProcessor;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;

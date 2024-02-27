@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springframework.beanfactorylifecircle;
+package org.lyflexi.debug_springframework.factoryProcessor;
 
 
 import org.springframework.context.annotation.Bean;
@@ -97,7 +97,7 @@ import org.springframework.context.annotation.Configuration;
  * 
  *
  */
-@ComponentScan("org.lyflexi.debug_springframework.beanfactorylifecircle")
+@ComponentScan("org.lyflexi.debug_springframework.factoryProcessor")
 @Configuration
 public class ExtConfig {
 	

@@ -1,8 +1,6 @@
 package org.lyflexi.debug_springframework.listener;
 
 import org.junit.jupiter.api.Test;
-import org.lyflexi.debug_springframework.beanfactorylifecircle.ExtConfig;
-import org.lyflexi.debug_springframework.tx.TxConfig;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
