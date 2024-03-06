@@ -188,7 +188,7 @@ public class MainConfigOfAOP {
 	//业务逻辑类加入容器中
 	@Bean
 	public MathCalculator calculator(){
-		return new MathCalculator();
+		return new ImpCalculator();
 	}
 
 	//切面类加入到容器中
