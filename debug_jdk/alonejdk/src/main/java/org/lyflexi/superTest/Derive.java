@@ -1,4 +1,4 @@
-package org.lyflexi.spuer;
+package org.lyflexi.superTest;
 
 /**
  * @Author: ly
