@@ -1,4 +1,4 @@
-package org.lyflexi.semaphoreTest;
+package org.lyflexi.lockUtils.semaphoreTest;
 
 /**
  * @Author: ly

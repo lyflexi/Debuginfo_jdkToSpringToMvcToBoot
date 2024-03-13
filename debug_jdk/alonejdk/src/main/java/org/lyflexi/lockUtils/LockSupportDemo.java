@@ -1,4 +1,4 @@
-package org.lyflexi.lock;
+package org.lyflexi.lockUtils;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;

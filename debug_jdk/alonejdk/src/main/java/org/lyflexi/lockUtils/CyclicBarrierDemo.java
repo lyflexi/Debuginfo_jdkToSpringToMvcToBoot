@@ -1,4 +1,4 @@
-package org.lyflexi.lock;
+package org.lyflexi.lockUtils;
 
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -37,12 +37,26 @@ public class CyclicBarrierDemo {
         for (int i = 0; i < 4; i++) {
             threadPool.execute(new MyThread(str[i]));
         }
+
         try {
             Thread.sleep(4000);
             System.out.println("四个人一起到达球场，现在开始打球");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        String[] str1= {"王二","洪光","雷兵","赵三"};
+        for (int i = 0; i < 4; i++) {
+            threadPool.execute(new MyThread(str1[i]));
+        }
+        try {
+            Thread.sleep(4000);
+            System.out.println("四个人一起到达球场，表示愿意一起打球，现在八个人开始打球");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
 
     }
 }

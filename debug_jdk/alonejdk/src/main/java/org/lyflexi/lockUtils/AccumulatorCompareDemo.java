@@ -1,4 +1,4 @@
-package org.lyflexi.lock;
+package org.lyflexi.lockUtils;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicLong;

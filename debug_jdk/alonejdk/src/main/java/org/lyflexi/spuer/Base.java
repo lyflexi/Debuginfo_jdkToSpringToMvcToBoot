@@ -1,4 +1,4 @@
-package org.lyflexi.thisspuer;
+package org.lyflexi.spuer;
 
 /**
  * @Author: ly

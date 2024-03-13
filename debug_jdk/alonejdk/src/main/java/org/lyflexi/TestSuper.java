@@ -1,4 +1,4 @@
-package org.lyflexi.test;
+package org.lyflexi;
 
 public class TestSuper {
     public static class Person {
