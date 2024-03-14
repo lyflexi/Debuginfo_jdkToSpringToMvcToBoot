@@ -1,4 +1,4 @@
-package org.lyflexi.interrupt;
+package org.lyflexi.thread.interrupt;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
