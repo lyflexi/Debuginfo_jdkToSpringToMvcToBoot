@@ -1,4 +1,4 @@
-package org.lyflexi.synchronize.notifyAll;
+package org.lyflexi.monitor_synchronized.notifyAll;
 
 public class TestNotify {
     static final Object room = new Object();

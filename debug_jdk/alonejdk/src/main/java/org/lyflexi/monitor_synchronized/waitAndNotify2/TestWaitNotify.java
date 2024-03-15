@@ -1,4 +1,4 @@
-package org.lyflexi.synchronize.waitAndNotify2;
+package org.lyflexi.monitor_synchronized.waitAndNotify2;
 
 /**
  * @Author: ly

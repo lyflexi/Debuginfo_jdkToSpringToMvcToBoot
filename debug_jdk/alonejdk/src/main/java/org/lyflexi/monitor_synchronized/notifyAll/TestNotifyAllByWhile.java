@@ -1,6 +1,6 @@
-package org.lyflexi.synchronize.notifyAll;
+package org.lyflexi.monitor_synchronized.notifyAll;
 
-public class TestNotifyAll {
+public class TestNotifyAllByWhile {
     static final Object room = new Object();
     static boolean hasCigarette = false;
     static boolean hasTakeout = false;
@@ -10,8 +10,8 @@ public class TestNotifyAll {
         new Thread(() -> {
             synchronized (room) {
                 System.out.println("有烟没？[{}]"+ hasCigarette);
-                if (!hasCigarette) {
-                    System.out.println("没烟，先歇会！"+System.currentTimeMillis());
+                while (!hasCigarette) {
+                    System.out.println("没烟，先歇会！");
                     try {
                         room.wait();
                     } catch (InterruptedException e) {
@@ -61,4 +61,3 @@ public class TestNotifyAll {
     }
 
 }
-

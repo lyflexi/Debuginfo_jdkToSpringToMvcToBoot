@@ -1,10 +1,10 @@
-package org.lyflexi.synchronize;
+package org.lyflexi.monitor_synchronized;
 
 /**
  * @Author: ly
  * @Date: 2024/2/24 17:00
  */
-public class VolatileExample {
+public class VisibleExample {
 
     /**
      * main 方法作为一个主线程

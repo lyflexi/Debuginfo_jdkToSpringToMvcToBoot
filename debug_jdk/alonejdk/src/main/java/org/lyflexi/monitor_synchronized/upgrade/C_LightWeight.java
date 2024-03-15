@@ -1,11 +1,11 @@
-package org.lyflexi.synchronize.upgrade;
+package org.lyflexi.monitor_synchronized.upgrade;
 
 import org.openjdk.jol.info.ClassLayout;
 
 import java.util.concurrent.TimeUnit;
 
 
-public class B_LightWeight
+public class C_LightWeight
 {
     public static void main(String[] args)
     {

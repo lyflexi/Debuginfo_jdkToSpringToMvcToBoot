@@ -1,4 +1,4 @@
-package org.lyflexi.synchronize.waitAndNotify;
+package org.lyflexi.monitor_synchronized.waitAndNotify;
 
 import java.util.LinkedList;
 import java.util.Queue;

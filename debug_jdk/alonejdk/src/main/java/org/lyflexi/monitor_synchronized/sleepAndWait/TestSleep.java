@@ -1,4 +1,4 @@
-package org.lyflexi.synchronize.sleepAndWait;
+package org.lyflexi.monitor_synchronized.sleepAndWait;
 
 
 
