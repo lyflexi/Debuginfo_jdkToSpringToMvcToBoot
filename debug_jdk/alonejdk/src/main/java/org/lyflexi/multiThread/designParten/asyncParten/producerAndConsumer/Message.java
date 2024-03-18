@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.designParten.producerAndConsumer;
+package org.lyflexi.multiThread.designParten.asyncParten.producerAndConsumer;
 
 /**
  * @Author: ly

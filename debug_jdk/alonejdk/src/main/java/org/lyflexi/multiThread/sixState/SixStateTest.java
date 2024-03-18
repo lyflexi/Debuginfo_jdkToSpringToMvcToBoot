@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.threadCreation;
+package org.lyflexi.multiThread.sixState;
 
 import java.io.IOException;
 

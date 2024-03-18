@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.designParten.guardedSuspension;
+package org.lyflexi.multiThread.designParten.syncParten.guardedSuspension;
 
 import java.io.BufferedReader;
 import java.io.IOException;

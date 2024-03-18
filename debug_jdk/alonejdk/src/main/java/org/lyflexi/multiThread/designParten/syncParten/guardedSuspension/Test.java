@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.designParten.guardedSuspension;
+package org.lyflexi.multiThread.designParten.syncParten.guardedSuspension;
 
 import lombok.extern.slf4j.Slf4j;
 

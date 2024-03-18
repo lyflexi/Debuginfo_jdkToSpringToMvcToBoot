@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.designParten.guardedSuspension.rpcDubbo_OneToOne;
+package org.lyflexi.multiThread.designParten.syncParten.guardedSuspension.rpcDubbo_OneToOne;
 
 import lombok.extern.slf4j.Slf4j;
 

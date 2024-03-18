@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.designParten.producerAndConsumer;
+package org.lyflexi.multiThread.designParten.asyncParten.producerAndConsumer;
 
 import lombok.extern.slf4j.Slf4j;
 

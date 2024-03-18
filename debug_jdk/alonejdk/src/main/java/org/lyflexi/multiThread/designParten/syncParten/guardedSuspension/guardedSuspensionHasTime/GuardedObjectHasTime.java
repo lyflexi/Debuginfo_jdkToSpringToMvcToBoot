@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.designParten.guardedSuspension.guardedSuspensionHasTime;
+package org.lyflexi.multiThread.designParten.syncParten.guardedSuspension.guardedSuspensionHasTime;
 
 /**
  * @Author: ly
