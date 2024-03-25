@@ -1,4 +1,4 @@
-package org.lyflexi.jvmlock.pojo;
+package org.lyflexi.jvmlock.unsafeServiceMySql;
 
 import lombok.Data;
 
@@ -6,5 +6,5 @@ import lombok.Data;
 public class Stock {
     private Integer productCode;
 
-    private Integer stock = 5000;
+    private Integer stock;
 }
