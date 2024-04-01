@@ -71,6 +71,13 @@
             <artifactId>compiler</artifactId>
             <version>${itranswarp.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+
     </dependencies>
 
 
