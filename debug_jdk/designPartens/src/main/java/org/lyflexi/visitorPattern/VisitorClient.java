@@ -14,4 +14,5 @@ public class VisitorClient {
         System.out.println("-----------------启动短视频APP项目--------------------");
         bigHuYou.startProject(new LiveApp());
     }
+    //
 }
