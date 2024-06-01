@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springboot_actuator.metrics;
+package org.lyflexi.debug_springboot.actuator.metrics;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

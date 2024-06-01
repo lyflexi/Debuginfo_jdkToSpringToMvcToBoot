@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springboot_actuator.metrics;
+package org.lyflexi.debug_springboot.actuator.metrics;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;

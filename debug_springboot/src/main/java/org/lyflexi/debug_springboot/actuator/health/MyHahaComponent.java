@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springboot_actuator.health;
+package org.lyflexi.debug_springboot.actuator.health;
 
 
 import org.springframework.stereotype.Component;
