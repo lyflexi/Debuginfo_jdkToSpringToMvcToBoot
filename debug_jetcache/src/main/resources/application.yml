@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: debug_jetcache
+    port: 8080
+  datasource:
+    url: jdbc:mysql://192.168.18.100:3306/lyflexi?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+jetcache:
+  #统计间隔，0表示不统计
+  statIntervalMinutes: 15
+  areaInCacheName: false
+  local:
+    default:
+      type: linkedhashmap
+      keyConvertor: fastjson
+  remote:
+    default:
+      type: redis
+      keyConvertor: fastjson
+      valueEncoder: java
+      valueDecoder: java
+      poolConfig:
+        minIdle: 5
+        maxIdle: 20
+        maxTotal: 50
+      host: 192.168.18.100
+      port: 6379
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/*Mapper.xml
+  global-config:
+    db-config:
+      id-type: auto # 自动递增ID策略
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 控制台输出SQL日志
