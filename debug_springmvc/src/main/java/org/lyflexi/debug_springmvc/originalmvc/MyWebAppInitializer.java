@@ -1,7 +1,7 @@
-package org.lyflexi.debug_springmvc.mvcintegration;
+package org.lyflexi.debug_springmvc.originalmvc;
 
-import org.lyflexi.debug_springmvc.mvcintegration.config.AppConfig;
-import org.lyflexi.debug_springmvc.mvcintegration.config.RootConfig;
+import org.lyflexi.debug_springmvc.originalmvc.config.AppConfig;
+import org.lyflexi.debug_springmvc.originalmvc.config.RootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 //web容器启动的时候创建对象；调用方法来初始化容器以前前端控制器

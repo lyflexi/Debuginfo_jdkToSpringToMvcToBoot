@@ -1,6 +1,6 @@
-package org.lyflexi.debug_springmvc.mvcintegration.controller;
+package org.lyflexi.debug_springmvc.originalmvc.controller;
 
-import org.lyflexi.debug_springmvc.mvcintegration.queue.DeferredResultQueue;
+import org.lyflexi.debug_springmvc.originalmvc.queue.DeferredResultQueue;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

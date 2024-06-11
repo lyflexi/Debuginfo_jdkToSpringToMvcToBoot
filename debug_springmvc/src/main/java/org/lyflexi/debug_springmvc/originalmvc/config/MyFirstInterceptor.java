@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springmvc.mvcintegration.config;
+package org.lyflexi.debug_springmvc.originalmvc.config;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

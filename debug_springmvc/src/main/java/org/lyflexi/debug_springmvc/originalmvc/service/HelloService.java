@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springmvc.mvcintegration.service;
+package org.lyflexi.debug_springmvc.originalmvc.service;
 
 import org.springframework.stereotype.Service;
 

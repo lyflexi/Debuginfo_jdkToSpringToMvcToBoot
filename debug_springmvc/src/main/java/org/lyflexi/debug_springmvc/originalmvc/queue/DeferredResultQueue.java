@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springmvc.mvcintegration.queue;
+package org.lyflexi.debug_springmvc.originalmvc.queue;
 
 import org.springframework.web.context.request.async.DeferredResult;
 

@@ -1,4 +1,4 @@
-package org.lyflexi.debug_springmvc.mvcintegration.config;
+package org.lyflexi.debug_springmvc.originalmvc.config;
 
 
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.*;
 
 //SpringMVC只扫描Controller；子容器
 //要想满足只扫描，还需要禁用默认的过滤规则useDefaultFilters=false ；
-@ComponentScan(value="org.lyflexi.debug_springmvc.mvcintegration",includeFilters={
+@ComponentScan(value= "org.lyflexi.debug_springmvc.originalmvc",includeFilters={
 		@Filter(type=FilterType.ANNOTATION,classes={Controller.class})
 },useDefaultFilters=false)
 @EnableWebMvc
