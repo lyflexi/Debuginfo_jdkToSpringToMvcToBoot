@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.18.100:5432/LYDB?currentSchema=lyschema
+    username: ly_dev
+    password: ly_dev
+    driver-class-name: org.postgresql.Driver
+    #使用了hikari连接池
+    hikari:
+      maximum-pool-size: 20
+
+  jpa:
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml # 如果有Mapper XML文件的话
+  type-aliases-package: org.lyflexi.debug_mybatis.entity # 实体类包路径
+
+server:
+  port: 8080

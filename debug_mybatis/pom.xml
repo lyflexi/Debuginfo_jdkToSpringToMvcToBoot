@@ -59,6 +59,45 @@
             <artifactId>compiler</artifactId>
             <version>${itranswarp.version}</version>
         </dependency>
+        <!-- Spring Boot Starter Data JPA (for basic JDBC and transaction management) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- PostgreSQL Driver -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.3</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- MyBatis-Plus Spring Boot Starter -->
+        <!--
+            mybatis-plus-boot-starter中自带的mybatis-spring版本太低，和springboot3.2.1不兼容，需要升级mybatis-spring版本
+            error不兼容提示：Invalid value type for attribute ‘factoryBeanObjectType‘: java.lang.String
+         -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.6</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mybatis</groupId>
+                    <artifactId>mybatis-spring</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>
