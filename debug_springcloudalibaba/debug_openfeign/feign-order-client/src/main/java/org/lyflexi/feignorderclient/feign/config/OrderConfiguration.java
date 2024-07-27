@@ -1,5 +1,7 @@
 package org.lyflexi.feignorderclient.feign.config;
 
+import org.lyflexi.feignorderclient.feign.interceptor.OrderInterceptor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -10,4 +12,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OrderConfiguration {
 
+    @Bean
+    public OrderInterceptor orderInterceptor(){
+        return new OrderInterceptor();
+    }
 }

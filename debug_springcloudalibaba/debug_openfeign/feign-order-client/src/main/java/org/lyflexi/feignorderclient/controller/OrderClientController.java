@@ -3,7 +3,7 @@ package org.lyflexi.feignorderclient.controller;
 import jakarta.annotation.Resource;
 import org.lyflexi.cloudfeignapi.Order;
 import org.lyflexi.cloudfeignapi.Result;
-import org.lyflexi.feignorderclient.feign.client.OrderService;
+import org.lyflexi.feignorderclient.feign.client.OrderClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderClientController {
 
     @Resource
-    private OrderService orderService;
+    private OrderClient orderClient;
 
     @GetMapping(value = "/consumer/feign/order/get/{id}")
     public Result<Order> getOrderById(@PathVariable("id") Long id)
     {
-        Order order = orderService.getOrderById(id);
+        Order order = orderClient.getOrderById(id);
         return new Result<>(order);
     }
 }
