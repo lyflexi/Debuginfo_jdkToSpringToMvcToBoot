@@ -2,7 +2,7 @@ debuginfo_jdkToFramework涵盖以下源码级调试案例，相信你会更加�
 
 本仓库混合了两套Spring版本
 
-# Spring版本A：springboot 3.0.0
+# springboot 3.0.0、springframework 6.0.2
 说明：为了适配最新版的springcloud2022，springboot最高只能支持到3.0.0
 
 - jdk 17，springboot3统一升级jdk17
@@ -28,7 +28,7 @@ debuginfo_jdkToFramework涵盖以下源码级调试案例，相信你会更加�
 - spring.cloud.alibaba.version 2022.0.0.0-RC2
 - spring.cloud.version 2022.0.0
 
-# Spring版本B springboot2.7.18、spring-5.3.31
+# springboot2.7.18、springframework 5.3.31
 说明：目前xxl-job最新版本只支持springboot2.7.18、spring-5.3.31
 
 - jdk 8
