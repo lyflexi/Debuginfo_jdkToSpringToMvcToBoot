@@ -1,4 +1,4 @@
-package org.lyflexi.multiThread.threadCreation;
+package org.lyflexi.multiThread.threadlocal;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

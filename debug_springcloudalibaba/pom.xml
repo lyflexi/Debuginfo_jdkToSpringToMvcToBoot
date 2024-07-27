@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.lyflexi</groupId>
-    <artifactId>debug_springcloud</artifactId>
+    <artifactId>debug_springcloudalibaba</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>debug_springcloud</name>
     <description>debug_springcloud</description>
