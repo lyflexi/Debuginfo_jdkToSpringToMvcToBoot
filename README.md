@@ -1,25 +1,40 @@
-# debuginfo_jdkToFramework
+debuginfo_jdkToFramework涵盖以下源码级调试案例，相信你会更加具有竞争力！
 
-涵盖以下源码级调试案例，相信你会更加具有竞争力！
-- jdk 17
-- springframework 6.1.2
-- springframework-custom源码级修改版
+本仓库混合了两套Spring版本
+
+# Spring版本A：springboot 3.0.0
+说明：为了适配最新版的springcloud2022，springboot最高只能支持到3.0.0
+
+- jdk 17，springboot3统一升级jdk17
+- springframework 6.0.2
+- springmvc 6.0.2
+- springframework-custom源码级修改版,调试三级缓存
 - servlet 3.0+
-- jakarta.servlet-api 5.0.0（对应于tomcat10+）
+- jakarta.servlet-api 5.0.0，springboot3统一升级javax为jakarta
 - tomcat 10.1.7
-- springmvc 6.1.2
-- springboot 3.2.1
-  - 主线任务一，servlet路线
-  - 主线任务二，reactive路线，敬请期待......
-- rocketmq 4.9.2
+- servlet路线
+- 响应式编程reactive路线，敬请期待......
 - 分布式锁系列
-  - MySQL 
+  - MySQL 5/8
   - redisTemplate
   - Redisson3.23
   - zookeeper3.7
   - Curator4.3
-- springcloud系列(...)
+- 缓存系列
+  - jetcache
+- 消息中间件系列
+  - rocketmq 4.9.2
+  - rabbitmq 
+- spring.cloud.alibaba.version 2022.0.0.0-RC2
+- spring.cloud.version 2022.0.0
 
+# Spring版本B springboot2.7.18、spring-5.3.31
+说明：目前xxl-job最新版本只支持springboot2.7.18、spring-5.3.31
+
+- jdk 8
+- xxl-job 2.4.2-SNAPSHOT
+
+# 项目结构
 Directory of E:\github\debuginfo_jdkToFramework:
 
 - 2024/04/10  17:27              debug_distributedlock
