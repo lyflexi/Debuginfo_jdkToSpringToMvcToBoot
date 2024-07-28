@@ -1,9 +1,9 @@
-package org.lyflexi.feignorderclient.controller;
+package org.lyflexi.feignclient.controller;
 
 import jakarta.annotation.Resource;
 import org.lyflexi.cloudfeignapi.Order;
 import org.lyflexi.cloudfeignapi.Result;
-import org.lyflexi.feignorderclient.feign.client.OrderClient;
+import org.lyflexi.feignclient.feign.client.OrderClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

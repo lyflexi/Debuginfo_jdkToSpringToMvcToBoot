@@ -1,4 +1,4 @@
-package org.lyflexi.feignorderclient.feign.config;
+package org.lyflexi.feignclient.feign.config;
 
 import org.springframework.context.annotation.Configuration;
 

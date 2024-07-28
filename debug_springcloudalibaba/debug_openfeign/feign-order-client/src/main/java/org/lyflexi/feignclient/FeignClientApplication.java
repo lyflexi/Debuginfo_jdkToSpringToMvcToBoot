@@ -1,6 +1,6 @@
-package org.lyflexi.feignorderclient;
+package org.lyflexi.feignclient;
 
-import org.lyflexi.feignorderclient.feign.config.DefaultConfiguration;
+import org.lyflexi.feignclient.feign.config.DefaultConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -10,12 +10,12 @@ import org.springframework.context.annotation.FilterType;
 
 @SpringBootApplication
 @EnableFeignClients(defaultConfiguration = {DefaultConfiguration.class}) // 开启feign
-@ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX,pattern = "org.lyflexi.feignorderclient.feign.config.*"))
+@ComponentScan(excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX,pattern = "org.lyflexi.feignclient.feign.config.*"))
 @EnableDiscoveryClient
-public class FeignOrderClientApplication {
+public class FeignClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FeignOrderClientApplication.class, args);
+        SpringApplication.run(FeignClientApplication.class, args);
     }
 
 }

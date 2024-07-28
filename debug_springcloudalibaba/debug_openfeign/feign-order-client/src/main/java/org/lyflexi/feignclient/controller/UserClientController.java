@@ -1,8 +1,8 @@
-package org.lyflexi.feignorderclient.controller;
+package org.lyflexi.feignclient.controller;
 
 import org.lyflexi.cloudfeignapi.Result;
 import org.lyflexi.cloudfeignapi.User;
-import org.lyflexi.feignorderclient.feign.client.UserClient;
+import org.lyflexi.feignclient.feign.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

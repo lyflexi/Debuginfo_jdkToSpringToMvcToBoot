@@ -1,7 +1,7 @@
-package org.lyflexi.feignorderclient.config;
+package org.lyflexi.feignclient.config;
 
-import org.lyflexi.feignorderclient.feign.client.OrderClient;
-import org.lyflexi.feignorderclient.feign.client.UserClient;
+import org.lyflexi.feignclient.feign.client.OrderClient;
+import org.lyflexi.feignclient.feign.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

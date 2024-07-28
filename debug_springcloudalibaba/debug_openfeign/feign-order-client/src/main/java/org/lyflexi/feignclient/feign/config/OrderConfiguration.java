@@ -1,6 +1,6 @@
-package org.lyflexi.feignorderclient.feign.config;
+package org.lyflexi.feignclient.feign.config;
 
-import org.lyflexi.feignorderclient.feign.interceptor.OrderInterceptor;
+import org.lyflexi.feignclient.feign.interceptor.OrderInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,4 +1,4 @@
-package org.lyflexi.feignorderclient.config;
+package org.lyflexi.feignclient.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

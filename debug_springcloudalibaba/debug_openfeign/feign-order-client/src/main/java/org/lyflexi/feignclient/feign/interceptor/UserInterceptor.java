@@ -1,4 +1,4 @@
-package org.lyflexi.feignorderclient.feign.interceptor;
+package org.lyflexi.feignclient.feign.interceptor;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
