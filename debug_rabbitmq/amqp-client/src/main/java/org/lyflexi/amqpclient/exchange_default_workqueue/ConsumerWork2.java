@@ -1,4 +1,4 @@
-package org.lyflexi.amqpclient.workqueue;
+package org.lyflexi.amqpclient.exchange_default_workqueue;
 
 import com.rabbitmq.client.*;
 import org.lyflexi.amqpclient.util.ConnectionUtil;

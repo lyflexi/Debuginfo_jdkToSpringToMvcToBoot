@@ -1,4 +1,4 @@
-package org.lyflexi.amqpclient.helloword;
+package org.lyflexi.amqpclient.exchange_default_helloworld;
   
 import com.rabbitmq.client.Channel;  
 import com.rabbitmq.client.Connection;  

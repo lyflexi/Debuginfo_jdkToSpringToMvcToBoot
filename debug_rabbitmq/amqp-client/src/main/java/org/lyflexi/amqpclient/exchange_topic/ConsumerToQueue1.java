@@ -1,19 +1,19 @@
-package org.lyflexi.amqpclient.workqueue;
-  
+package org.lyflexi.amqpclient.exchange_topic;
+
 import com.rabbitmq.client.*;
 import org.lyflexi.amqpclient.util.ConnectionUtil;
 
 import java.io.IOException;  
   
-public class ConsumerWork1 {
-  
-    static final String QUEUE_NAME = "work_queue";  
+public class ConsumerToQueue1 {
   
     public static void main(String[] args) throws Exception {  
   
         Connection connection = ConnectionUtil.getConnection();
   
         Channel channel = connection.createChannel();  
+  
+        String QUEUE_NAME = "test_topic_queue1";  
   
         channel.queueDeclare(QUEUE_NAME,true,false,false,null);  
   
@@ -22,7 +22,7 @@ public class ConsumerWork1 {
             @Override  
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {  
   
-                System.out.println("Consumer1 body："+new String(body));  
+                System.out.println("body："+new String(body));  
   
             }  
   
