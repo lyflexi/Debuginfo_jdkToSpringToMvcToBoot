@@ -1,10 +1,15 @@
-debuginfo_jdkToFramework涵盖以下源码级调试案例，相信你会更加具有竞争力！
+框架版本说明：本仓库混合了两套Spring版本,分别是
+- springboot 3.0.0、spring-framework 6.0.2、spring-webmvc 6.0.2
+- springboot 2.7.18、spring-framework 5.3.31、spring-webmvc 5.3.31
 
-本仓库混合了两套Spring版本
+问题1：为什么不用更高版本的springboot? 
+- 答：可以使用更高的springboot版本，但是基于当前最新的spring-cloud2022只能支持springboot到3.0.0
 
+问题2：为什么一个仓库混用两套springboot版本?
+- 答：目前xxl-job最新版本只支持springboot2.7.18、spring-5.3.31，要对xxl-job的spring版本进行升级成本较高，故暂未调整
+
+debuginfo_jdkToFramework涵盖以下源码级调试案例，细细品读最佳实践，相信你会更加具有竞争力！
 # springboot 3.0.0、springframework 6.0.2
-说明：最新版的springcloud2022只能支持springboot到3.0.0
-
 - jdk 17，springboot3统一升级jdk17
 - springframework 6.0.2
 - springmvc 6.0.2
@@ -25,39 +30,19 @@ debuginfo_jdkToFramework涵盖以下源码级调试案例，相信你会更加�
 - 消息中间件系列
   - rocketmq 4.9.2
   - rabbitmq 
-- spring.cloud.alibaba.version 2022.0.0.0-RC2
-- spring.cloud.version 2022.0.0
+- spring.cloud.alibaba 2022.0.0.0-RC2
+- spring.cloud 2022.0.0
 
 # springboot2.7.18、springframework 5.3.31
-说明：目前xxl-job最新版本只支持springboot2.7.18、spring-5.3.31
 
 - jdk 8
+- javax.servlet-api
 - xxl-job 2.4.2-SNAPSHOT
 
-# 项目结构
-Directory of E:\github\debuginfo_jdkToFramework:
 
-- 2024/04/10  17:27              debug_distributedlock
-- 2024/04/01  10:04              debug_jdk
-- 2024/06/01  20:09              debug_jetcache
-- 2024/06/18  22:37              debug_mybatis
-- 2024/02/02  22:37              debug_netty
-- 2024/01/22  14:57              debug_rocketmq
-- 2024/01/09  15:17              debug_servlet
-- 2024/06/01  15:44              debug_springboot
-- 2024/03/03  19:33              debug_springboot_robotstarter
-- 2024/06/01  15:41              debug_springcloud
-- 2024/02/12  11:56              debug_springframework
-- 2024/01/19  14:27              debug_springframework_custom
-- 2024/01/17  15:56              debug_springmvc
-- 2024/07/07  16:09              drawio
-- 2024/03/13  20:27                78 LazyInnerClassSi
-- 2024/03/13  20:25                78 LazyInnerClassSin.obj
-- 2024/03/13  20:23                78 LazyInnerClassSingleto.obj
-- 2024/03/13  20:30                78 LazyInnerClassSingleton.obj
-- 2024/01/09  16:42            11,566 LICENSE
-- 2024/07/07  16:12            76,664 README.md
-- 2024/02/02  22:37                16 words2.txt
 
-其中drawio目录中绘制了部分原理草图
+# 图片附件
+
+- 其中drawio目录中绘制了部分原理草图
+- 其中excalidraw目录中绘制了部分原理草图
 
