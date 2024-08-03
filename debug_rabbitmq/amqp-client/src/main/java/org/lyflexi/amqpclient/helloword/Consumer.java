@@ -1,4 +1,4 @@
-package org.lyflexi.amqpclient.simple;
+package org.lyflexi.amqpclient.helloword;
   
 import com.rabbitmq.client.*;  
   
