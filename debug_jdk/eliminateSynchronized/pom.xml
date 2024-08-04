@@ -30,6 +30,7 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- 下述两个用于基准测试的包jmh会对lombok造成影响，因此单独建立该模块测试，避免maven污染-->
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
