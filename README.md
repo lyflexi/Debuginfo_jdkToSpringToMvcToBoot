@@ -44,6 +44,6 @@
 - javax.servlet-api
 - xxl-job 2.4.2-SNAPSHOT
 ## 提供草图
-- 其中drawio目录中绘制了部分原理草图，插件支持：diagrams-net-integration
-- 其中excalidraw目录中绘制了部分原理草图，插件支持：excalidraw-integration
+
+> https://github.com/lyflexi/vsNotes
 
