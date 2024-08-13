@@ -1,6 +1,7 @@
 package org.lyflexi.custom_rabbit_framework.commonapi.message;
 
-import com.baomidou.mybatisplus.core.toolkit.IdWorker;
+import cn.hutool.core.lang.UUID;
+//import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import lombok.Data;
 import org.lyflexi.custom_rabbit_framework.commonapi.utils.Assert;
 
@@ -15,7 +16,8 @@ import org.lyflexi.custom_rabbit_framework.commonapi.utils.Assert;
 public abstract class BaseMessageData implements IMessageData {
 
     public BaseMessageData() {
-        this.seqNo = IdWorker.getIdStr();
+//        this.seqNo = IdWorker.getIdStr();
+        this.seqNo = UUID.fastUUID().toString();
     }
 
     /**

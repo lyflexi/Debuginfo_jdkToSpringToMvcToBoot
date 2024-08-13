@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 class CustomRabbitFrameworkApplicationTests {
     @Autowired
     @Qualifier("springEventPublisher")
-    private IEventPublisher eventPublisher;
+    private IEventPublisher springEventPublisher;
 
     @Test
     void contextLoads() {
@@ -32,7 +32,7 @@ class CustomRabbitFrameworkApplicationTests {
         message.setSeqNo(RandomUtil.randomNumbers(10));
         message.setVersion(RandomUtil.randomLong());
         message.setFactoryCode("SZ54");
-        eventPublisher.publish(DemoEvent.of(message));
+        springEventPublisher.publish(DemoEvent.of(message));
         log.info("testDemoSpringEventPublisher测试结束");
     }
 

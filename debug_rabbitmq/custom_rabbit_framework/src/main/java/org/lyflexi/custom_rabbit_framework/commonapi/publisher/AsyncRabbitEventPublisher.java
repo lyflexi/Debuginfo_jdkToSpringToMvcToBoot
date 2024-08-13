@@ -88,7 +88,7 @@ public class AsyncRabbitEventPublisher implements IEventPublisher, SmartInitiali
                             .build();
                     msgLogService.save(msgLogPo);
                     CorrelationData correlationData = new CorrelationData(message.getSeqNo());
-                    correlationData.setReturned(new ReturnedMessage(new Message(message.getFactoryCode().getBytes(StandardCharsets.UTF_8), new MessageProperties()), 0,"","",""));
+                    correlationData.setReturned(new ReturnedMessage(new Message(message.getFactoryCode().getBytes(StandardCharsets.UTF_8), new MessageProperties()), 0,"",eventType.getExchange(),eventType.getRoutingKey()));
                     rabbitTemplate.convertAndSend(eventType.getExchange(), eventType.getRoutingKey(), message, process -> {
                         process.getMessageProperties().getHeaders().put(MQIConstant.COUNTER_KEY, 0);
                         return process;

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoMessageHandler {
     public void handleMessage (DemoMessageData message) {
-        log.info("开始处理消息：{}", JSON.toJSONString(message));
+        log.info("开始处理asyncRabbitEventPublisher消息：{}", JSON.toJSONString(message));
     }
 }
 

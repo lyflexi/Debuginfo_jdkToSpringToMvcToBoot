@@ -5,8 +5,10 @@ import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
 import org.lyflexi.custom_rabbit_framework.biz.event.DemoEvent;
 import org.lyflexi.custom_rabbit_framework.biz.handler.DemoMessageHandler;
+import org.lyflexi.custom_rabbit_framework.commonapi.constant.MQIConstant;
 import org.lyflexi.custom_rabbit_framework.commonapi.listener.IListener;
 import org.lyflexi.custom_rabbit_framework.commonapi.message.DemoMessageData;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.support.AmqpHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
@@ -34,7 +36,7 @@ public class DemoEventListener implements IListener {
      * @param deliveryTag MQ消息唯一标识
      * @param channel MQ通道
      */
-//    @RabbitListener(queues = "SSS", concurrency = "1")
+    @RabbitListener(queues = MQIConstant.TASK_SUBMITTED_QUEUE, concurrency = "1")
     public void onRabbitMQEvent(DemoMessageData message, @Header(AmqpHeaders.DELIVERY_TAG) long deliveryTag, Channel channel) {
         demoMessageHandler.handleMessage(message);
     }

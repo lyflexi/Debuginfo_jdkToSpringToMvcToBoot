@@ -18,11 +18,7 @@ import java.util.Arrays;
 public enum EventTypeEnums {
 
     // 测试事件
-    DEMO_EVENT("local_demo", "local_demo", "local_demo_queue", "local_demo_route", "local_demo_ex"),
-    // MES物料过站事件
-    @Deprecated
-    MES_PASS_STATION_EVENT("mes_material_pass_station", "MES_PASS_STATION_TOPIC", "MES2LES_PASS_STATION_QUEUE", "LES_DEFAULT_ROUTING:MES2LES_PASS_STATION_QUEUE", "LES_DEFAULT_TOPIC_EXCHANGE"),
-
+    DEMO_EVENT("demo_event", "MES_PASS_STATION_TOPIC", "TASK_SUBMITTED_QUEUE2", "LES_DEFAULT_ROUTING:TASK_SUBMITTED_QUEUE2", "LES_DEFAULT_TOPIC_EXCHANGE"),
     ;
 
     /**
