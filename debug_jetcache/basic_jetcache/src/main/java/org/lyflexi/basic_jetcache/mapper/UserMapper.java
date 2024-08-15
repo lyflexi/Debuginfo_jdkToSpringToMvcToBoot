@@ -1,8 +1,8 @@
-package org.lylfexi.debug_jetcache.simpletest.mapper;
+package org.lyflexi.basic_jetcache.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import org.lylfexi.debug_jetcache.simpletest.po.User;
+import org.lyflexi.basic_jetcache.po.User;
 
 /**
  * @Author: ly

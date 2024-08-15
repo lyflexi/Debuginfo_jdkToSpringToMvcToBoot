@@ -1,16 +1,42 @@
+#spring:
+#  #-----------------------------------------------------------------
+#  ##                        Redis 连接配置                         --
+#  #-----------------------------------------------------------------
+#  data:
+#    redis:
+#      host: 10.43.3.164
+#      port: ${REDIS_PORT:6379}
+#      password: ${REDIS_PASSWORD:Changeme_123}
+#      database: ${REDIS_DATABASE:15}
+#####################################################################
+###                         Jet-cache 配置                          ##
+#####################################################################
+#jetcache:
+#  #统计间隔，0表示不统计
+#  statIntervalMinutes: 15
+#  areaInCacheName: false
+#  local:
+#    default:
+#      type: linkedhashmap
+#      keyConvertor: fastjson
+#  remote:
+#    default:
+#      type: redis
+#      keyConvertor: fastjson
+#      valueEncoder: java
+#      valueDecoder: java
+#      poolConfig:
+#        minIdle: 5
+#        maxIdle: 20
+#        maxTotal: 50
+#      host: 10.43.3.164
+#      port: ${REDIS_PORT:6379}
+#      password: ${REDIS_PASSWORD:Changeme_123}
+#      database: ${REDIS_DATABASE:15}
 spring:
-  #-----------------------------------------------------------------
-  ##                        Redis 连接配置                         --
-  #-----------------------------------------------------------------
-  data:
-    redis:
-      host: 10.43.3.164
-      port: ${REDIS_PORT:6379}
-      password: ${REDIS_PASSWORD:Changeme_123}
-      database: ${REDIS_DATABASE:15}
-####################################################################
-##                         Jet-cache 配置                          ##
-####################################################################
+  application:
+    name: custom_jetcache_framework
+    port: 8080
 jetcache:
   #统计间隔，0表示不统计
   statIntervalMinutes: 15
@@ -29,7 +55,6 @@ jetcache:
         minIdle: 5
         maxIdle: 20
         maxTotal: 50
-      host: 10.43.3.164
-      port: ${REDIS_PORT:6379}
-      password: ${REDIS_PASSWORD:Changeme_123}
-      database: ${REDIS_DATABASE:15}
+      host: 192.168.18.100
+      port: 6379
+

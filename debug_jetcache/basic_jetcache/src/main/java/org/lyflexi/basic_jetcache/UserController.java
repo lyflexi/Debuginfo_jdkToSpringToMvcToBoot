@@ -1,7 +1,8 @@
-package org.lylfexi.debug_jetcache.simpletest;
+package org.lyflexi.basic_jetcache;
 
-import org.lylfexi.debug_jetcache.simpletest.po.User;
-import org.lylfexi.debug_jetcache.simpletest.service.UserService;
+
+import org.lyflexi.basic_jetcache.po.User;
+import org.lyflexi.basic_jetcache.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

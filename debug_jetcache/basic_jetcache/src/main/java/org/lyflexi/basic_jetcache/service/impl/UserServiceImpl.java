@@ -1,4 +1,4 @@
-package org.lylfexi.debug_jetcache.simpletest.service.impl;
+package org.lyflexi.basic_jetcache.service.impl;
 
 import com.alicp.jetcache.Cache;
 import com.alicp.jetcache.CacheManager;
@@ -6,9 +6,11 @@ import com.alicp.jetcache.anno.CacheRefresh;
 import com.alicp.jetcache.anno.Cached;
 import com.alicp.jetcache.anno.CreateCache;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.lylfexi.debug_jetcache.simpletest.mapper.UserMapper;
-import org.lylfexi.debug_jetcache.simpletest.po.User;
-import org.lylfexi.debug_jetcache.simpletest.service.UserService;
+import lombok.extern.slf4j.Slf4j;
+
+import org.lyflexi.basic_jetcache.mapper.UserMapper;
+import org.lyflexi.basic_jetcache.po.User;
+import org.lyflexi.basic_jetcache.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,7 @@ import java.util.concurrent.TimeUnit;
  * @Date: 2024/6/1 18:33
  */
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
     @Autowired
     private CacheManager cacheManager;
@@ -44,6 +47,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Cached(name = "userCacheMethod",expire = 3600)
     public List<User> getDbALLUser() {
+        log.info("缓存过期：userCacheMethod");
         return userMapper.selectList(new QueryWrapper<>());
     }
 

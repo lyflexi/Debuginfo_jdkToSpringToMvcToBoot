@@ -8,6 +8,11 @@
         <version>3.0.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <packaging>pom</packaging>
+    <modules>
+        <module>basic_jetcache</module>
+        <module>custom_jetcache_framework</module>
+    </modules>
     <groupId>org.lylfexi</groupId>
     <artifactId>debug_jetcache</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -16,17 +21,16 @@
     <properties>
         <java.version>17</java.version>
         <!--注意这里的版本为2.6.2，要注意从2.7.0开始,@CreateCache注解被废弃-->
-        <jetcache.version>2.7.5</jetcache.version>
-        <junit.version>5.9.3</junit.version>
+        <jetcache.version>2.7.6</jetcache.version>
+        <fastjson.version>1.2.75</fastjson.version>
+        <mybatis.plus.version>3.5.6</mybatis.plus.version>
+        <mybatis.spring.version>3.0.3</mybatis.spring.version>
+        <hutool.version>4.5.2</hutool.version>
+        <fastjson.version>2.0.25</fastjson.version>
+        <javax.annotation.api.version>1.3.2</javax.annotation.api.version>
     </properties>
+
     <dependencies>
-        <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>junit-bom</artifactId>
-            <version>${junit.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
         <dependency>
             <groupId>com.alicp.jetcache</groupId>
             <artifactId>jetcache-starter-redis</artifactId>
@@ -37,48 +41,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.75</version> <!-- 使用最新版本或者你项目中所需的版本 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-        </dependency>
-
-            <!-- Spring Boot Starter for JDBC -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-jdbc</artifactId>
-            </dependency>
-            <!-- MySQL Driver -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- MyBatis-Plus Spring Boot Starter -->
-        <!--
-            mybatis-plus-boot-starter中自带的mybatis-spring版本太低，和springboot3.2.1不兼容，需要升级mybatis-spring版本
-            error不兼容提示：Invalid value type for attribute ‘factoryBeanObjectType‘: java.lang.String
-         -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.6</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.mybatis</groupId>
-                    <artifactId>mybatis-spring</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>3.0.3</version>
         </dependency>
     </dependencies>
 

@@ -32,7 +32,6 @@ public class SettingJetcacher implements IJetcacher {
     public SettingVo getSetting (String tenantId, String configKey) {
         Assert.notBlack(tenantId, "租户ID不能为空！");
         Assert.notBlack(configKey, "参数Key不能为空！");
-        log.info("缓存失效：{}，{}", tenantId, configKey);
         ISettingService settingService = SpringUtils.getBean(ISettingService.class);
         return settingService.getSetting(tenantId, configKey);
     }

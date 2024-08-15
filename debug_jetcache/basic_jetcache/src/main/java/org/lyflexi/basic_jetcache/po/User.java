@@ -1,4 +1,4 @@
-package org.lylfexi.debug_jetcache.simpletest.po;
+package org.lyflexi.basic_jetcache.po;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

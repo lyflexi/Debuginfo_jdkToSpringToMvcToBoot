@@ -1,7 +1,7 @@
 /**
  * Created on 2018/1/8.
  */
-package org.lylfexi;
+package org.lyflexi.basic_jetcache;
 
 import com.alicp.jetcache.*;
 import com.alicp.jetcache.embedded.LinkedHashMapCacheBuilder;

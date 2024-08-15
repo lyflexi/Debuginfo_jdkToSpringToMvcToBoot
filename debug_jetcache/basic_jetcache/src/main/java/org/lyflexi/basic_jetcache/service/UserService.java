@@ -1,6 +1,7 @@
-package org.lylfexi.debug_jetcache.simpletest.service;
+package org.lyflexi.basic_jetcache.service;
 
-import org.lylfexi.debug_jetcache.simpletest.po.User;
+
+import org.lyflexi.basic_jetcache.po.User;
 
 import java.util.List;
 
