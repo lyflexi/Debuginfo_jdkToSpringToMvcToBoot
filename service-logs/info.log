@@ -1,0 +1,12 @@
+2024-08-23 08:23:54,643 INFO org.springframework.boot.StartupInfoLogger [main] Starting DebugBasicjdkApplication using Java 17.0.11 with PID 4404 (D:\github\debuginfo_jdkToFramework\debug_java_development_kit\debug_basicjdk\target\classes started by liu.yan153 in D:\github\debuginfo_jdkToFramework)
+2024-08-23 08:23:54,660 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-08-23 08:23:55,331 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2024-08-23 08:23:55,342 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-23 08:23:55,343 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-08-23 08:23:55,344 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.1]
+2024-08-23 08:23:55,436 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-08-23 08:23:55,436 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 750 ms
+2024-08-23 08:23:55,811 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-08-23 08:23:55,832 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-23 08:23:55,838 INFO org.springframework.boot.StartupInfoLogger [main] Started DebugBasicjdkApplication in 1.491 seconds (process running for 3.591)
+2024-08-23 08:23:55,840 INFO org.lyflexi.debug_basicjdk.DebugBasicjdkApplication [main] Hello World!
