@@ -2,26 +2,30 @@ package org.lyflexi.boot_rabbit_consumer.listener;
 
 import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
+import org.lyflexi.boot_rabbit_common.constant.TopicMqConstant;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 @Component
 @Slf4j
-public class MyMessageListener {
-
-    public static final String QUEUE_NAME  = "boot_queue";
-//    @RabbitListener(queues = {QUEUE_NAME})
+public class TopicMqListener {
+//    @RabbitListener(queues = {RabbitMqConstant.BOOT_QUEUE})
     public void bootProcess(String dataString, Message message, Channel channel) throws IOException, InterruptedException {
         log.info("消费端 消息内容：" + dataString);
     }
 
-//    @RabbitListener(queues = {QUEUE_NAME})
+    /**
+     * 测试消息确认机制
+     * @param dataString
+     * @param message
+     * @param channel
+     * @throws IOException
+     */
+    @RabbitListener(queues = {TopicMqConstant.BOOT_QUEUE})
     public void processMessage(String dataString, Message message, Channel channel) throws IOException {
 
         // 获取当前消息的 deliveryTag
@@ -65,33 +69,34 @@ public class MyMessageListener {
         }
     }
 
-    @RabbitListener(queues = {QUEUE_NAME})
-    public void processMessageNormal(Message message, Channel channel) throws IOException {
-        // 监听正常队列，但是拒绝消息
-        log.info("★[normal]消息接收到，但我拒绝。");
-        channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);
-    }
+    /**
+     * 测试消费端限流
+     * @param dataString
+     * @param message
+     * @param channel
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    @RabbitListener(queues = {TopicMqConstant.BOOT_QUEUE})
+    public void processMessageTestPrefetch(String dataString, Message message, Channel channel) throws IOException, InterruptedException {
+        log.info("消费端 消息内容：" + dataString);
 
-    @RabbitListener(queues = {QUEUE_NAME})
-    public void processMessageDead(String dataString, Message message, Channel channel) throws IOException {
-        // 监听死信队列
-        log.info("★[dead letter]dataString = " + dataString);
-        log.info("★[dead letter]我是死信监听方法，我接收到了死信消息");
+        //如果消费者不设置prefetch，光靠睡眠时间是无法控制消费速率的
+        TimeUnit.SECONDS.sleep(1);
+
         channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
     }
 
-    @RabbitListener(queues = {QUEUE_NAME})
-    public void processMessageDelay(String dataString, Message message, Channel channel) throws IOException {
-        log.info("[delay message][消息本身]" + dataString);
-        log.info("[delay message][当前时间]" + new SimpleDateFormat("HH:mm:ss").format(new Date()));
-        channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
-    }
+    /**
+     * 测试消费超时
+     * @param dataString
+     * @param message
+     * @param channel
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    @RabbitListener(queues = {TopicMqConstant.BOOT_QUEUE})
+    public void processMessageTimeOut(String dataString, Message message, Channel channel) throws IOException, InterruptedException {
 
-    public static final String QUEUE_PRIORITY = "queue.test.priority";
-
-    @RabbitListener(queues = {QUEUE_PRIORITY})
-    public void processMessagePriority(String dataString, Message message, Channel channel) throws IOException {
-        log.info("[priority]" + dataString);
-        channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
     }
 }
