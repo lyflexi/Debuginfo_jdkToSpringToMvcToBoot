@@ -21,10 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class MockController {
 
-    @GetMapping(value = "/formatExceptionResult")
-    public void formatExceptionResult (){
+    @GetMapping(value = "/formatExceptionAdvice")
+    public void formatExceptionAdvice (){
         throw new LyFlexiBusinessException(LyflexiErrorType.NO_PULL_REPLENISH_CONFIG,new Object[]{"materialCode", "materialName","materialVersion"});
-
     }
 
     @GetMapping(value = "/formatExceptionThrow")
