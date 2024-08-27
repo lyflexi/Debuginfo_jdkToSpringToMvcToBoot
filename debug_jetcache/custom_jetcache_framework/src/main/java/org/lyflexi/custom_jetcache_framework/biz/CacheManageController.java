@@ -6,11 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.lyflexi.custom_jetcache_framework.biz.entity.CacheDataUpdateParam;
 import org.lyflexi.custom_jetcache_framework.biz.entity.CacheKeysVo;
 import org.lyflexi.custom_jetcache_framework.biz.service.ICacheService;
-import org.lyflexi.custom_jetcache_framework.commonApi.constant.CacheConstant;
 import org.lyflexi.custom_jetcache_framework.commonApi.holder.JetCacherHolder;
 import org.lyflexi.custom_jetcache_framework.commonApi.result.Result;
 import org.lyflexi.custom_jetcache_framework.commonApi.util.Assert;
-import org.lyflexi.custom_jetcache_framework.commonApi.util.RedisKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +25,7 @@ import java.util.List;
 @RequestMapping("/cache")
 //@RefreshScope ： SpringCloud注解
 @Slf4j
-public class CacheController {
+public class CacheManageController {
 
     @Autowired
     private ICacheService cacheService;

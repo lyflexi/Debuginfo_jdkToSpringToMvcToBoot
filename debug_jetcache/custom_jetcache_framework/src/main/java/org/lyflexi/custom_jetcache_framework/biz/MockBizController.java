@@ -1,12 +1,10 @@
 package org.lyflexi.custom_jetcache_framework.biz;
 
-import cn.hutool.core.util.RandomUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.lyflexi.custom_jetcache_framework.commonApi.entity.SettingVo;
 import org.lyflexi.custom_jetcache_framework.commonApi.facade.CacheSettingFacade;
 import org.lyflexi.custom_jetcache_framework.commonApi.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,7 +23,7 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/mock")
 @Slf4j
-public class MockController {
+public class MockBizController {
     @Autowired
     private CacheSettingFacade settingFacade;
 
