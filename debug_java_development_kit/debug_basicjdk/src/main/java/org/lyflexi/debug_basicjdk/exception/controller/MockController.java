@@ -21,9 +21,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class MockController {
 
-    @GetMapping(value = "/formatException")
-    public void asyncRabbitEventPublisher (){
+    @GetMapping(value = "/formatExceptionResult")
+    public void formatExceptionResult (){
         throw new LyFlexiBusinessException(LyflexiErrorType.NO_PULL_REPLENISH_CONFIG,new Object[]{"materialCode", "materialName","materialVersion"});
 
+    }
+
+    @GetMapping(value = "/formatExceptionThrow")
+    public void formatException (){
+        throw LyFlexiBusinessException.exception("需求[{0}]关联的工单排程基础信息丢失，无法继续执行！", "demandCode");
     }
 }
