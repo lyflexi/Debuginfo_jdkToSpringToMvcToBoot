@@ -25,7 +25,7 @@ import java.util.List;
 @RequestMapping("/cache")
 //@RefreshScope ： SpringCloud注解
 @Slf4j
-public class CacheManageController {
+public class FrontedCacheController {
 
     @Autowired
     private ICacheService cacheService;
