@@ -2,6 +2,7 @@ package org.lyflexi.boot_rabbit_producer.config;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
+import org.lyflexi.boot_rabbit_common.constant.TopicMqConstant;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -9,11 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 
 @Configuration
 @Slf4j
-public class RabbitConfig implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnsCallback {
+@Lazy(false)
+public class TopicMqConfig implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnsCallback {
 
 
     @Autowired
@@ -23,20 +26,20 @@ public class RabbitConfig implements RabbitTemplate.ConfirmCallback, RabbitTempl
     //声明交换机
     @Bean("bootTopicExchange")
     public Exchange bootTopicExchange(){
-        return ExchangeBuilder.topicExchange(RabbitMqConstant.BOOT_TOPIC_EXCHANGE).durable(true).build();
+        return ExchangeBuilder.topicExchange(TopicMqConstant.BOOT_TOPIC_EXCHANGE).durable(true).build();
     }
 
     //声明队列
     @Bean("bootQueue")
     public Queue bootQueue(){
-        return QueueBuilder.durable(RabbitMqConstant.BOOT_QUEUE).build();
+        return QueueBuilder.durable(TopicMqConstant.BOOT_QUEUE).build();
     }
 
     //绑定队列和交换机
     @Bean
     public Binding bootQueueExchage(@Qualifier("bootQueue")Queue bootQueue,
                                     @Qualifier("bootTopicExchange")Exchange bootTopicExchange){
-        return BindingBuilder.bind(bootQueue).to(bootTopicExchange).with(RabbitMqConstant.BOOT_TOPIC_EXCHANGE_KEY).noargs();
+        return BindingBuilder.bind(bootQueue).to(bootTopicExchange).with(TopicMqConstant.BOOT_TOPIC_EXCHANGE_KEY).noargs();
     }
 
 

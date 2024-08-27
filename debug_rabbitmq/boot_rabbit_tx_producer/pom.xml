@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>org.lyflexi</groupId>
-    <artifactId>boot_rabbit_consumer</artifactId>
+    <artifactId>boot_rabbit_tx_producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>boot_rabbit_consumer</name>
-    <description>boot_rabbit_consumer</description>
+    <name>boot_rabbit_tx_producer</name>
+    <description>boot_rabbit_tx_producer</description>
     <url/>
     <licenses>
         <license/>
@@ -29,7 +29,6 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>org.lyflexi</groupId>
             <artifactId>boot_rabbit_common</artifactId>

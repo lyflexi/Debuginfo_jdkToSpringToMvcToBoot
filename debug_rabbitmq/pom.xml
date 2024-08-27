@@ -16,7 +16,11 @@
     <description>debug_rabbitmq</description>
     <modules>
         <module>amqp-client</module>
+        <module>boot_rabbit_common</module>
+        <module>boot_rabbit_consumer</module>
+        <module>boot_rabbit_producer</module>
         <module>custom_rabbit_framework</module>
+        <module>boot_rabbit_tx_producer</module>
     </modules>
     <properties>
         <java.version>17</java.version>
