@@ -1,4 +1,4 @@
-package org.lyflexi.custom_jetcache_framework.biz.impl;
+package org.lyflexi.custom_jetcache_framework.biz.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;

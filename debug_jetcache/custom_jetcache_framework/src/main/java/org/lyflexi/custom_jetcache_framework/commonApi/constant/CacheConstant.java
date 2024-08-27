@@ -41,6 +41,10 @@ public class CacheConstant {
      * WMS叫料数据集合
      */
     public static final String CACHE_WMS_CALLMATERIAL = "SET:wms-callMaterial";
+    /**
+     * 用户配置
+     */
+    public static final String CACHE_NAME_USER_CONFIG = "CONFIG:user";
 
 
 

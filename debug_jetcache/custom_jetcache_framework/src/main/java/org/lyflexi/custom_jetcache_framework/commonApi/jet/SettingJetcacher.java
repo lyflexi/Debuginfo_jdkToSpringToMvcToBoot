@@ -36,11 +36,16 @@ public class SettingJetcacher implements IJetcacher {
         return settingService.getSetting(tenantId, configKey);
     }
 
+    /**
+     * 下面是另一套完整的缓存api
+     * @param cacheKeyPartSuffix 缓存key，不携带缓存名称
+     * @return
+     */
     @Override
     @Cached(name = CacheConstant.CACHE_NAME_SETTING, key = "#cacheKeyPartSuffix")
     public Object getValue(String cacheKeyPartSuffix) {
         log.info("缓存查询失效：key={}{}", CacheConstant.CACHE_NAME_SETTING, cacheKeyPartSuffix);
-        return true;
+        return null;
     }
 
     @Override
